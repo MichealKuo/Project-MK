@@ -127,12 +127,50 @@ body {
   font-size: 0.9rem;
   padding: 5px;
 }
+/* button & hover */
 .button {
-  transform: translateY(40px);
+  margin-top: 50px;
+  margin-bottom: 30px;
   width: 80%;
+  height: 35px;
   /* height: 30px; */
   border: 1px solid #f5df4d;
   border-radius: 90px;
-  cursor: pointer;
   text-align: center;
+}
+.button:hover {
+  background-color: #f5df4d;
+}
+button::before {
+  content: '';
+  position: absolute;
+  top: -5px; right: -10px;
+  bottom: -5px; left: -10px;
+ } 
+button {
+  background-color: transparent;
+  width: 90%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+
+}
+button:hover{
+  color: #fff;
+
+}
+/* pagination */
+
+.row-pagination{
+  display: flex;
+  justify-content: center;
+}
+.page-link{
+  color: #646464;
+}
+.page-link:hover{
+  background-color: #f5df4d;
+  color: #fff;
 }
