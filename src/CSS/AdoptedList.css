@@ -55,7 +55,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 2.5%;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -63,18 +63,30 @@ body {
   border-radius: 90px;
   flex-wrap: wrap;
 }
-.selector {
-  flex-wrap: wrap;
-}
 .selector > p {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
+select {
+  border: 0 ;
+  background-color: rgb(255, 255, 255);
+  /* needed */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+}
+select:focus {
+  outline: none;
+}
+option {
+  color: #f5df4d;
+}
 #ad-filter {
   font-size: 0.9rem;
   text-align: center;
-  min-width: 150px;
+  width: 150px;
 }
+
 
 /* list  cards  */
 
@@ -97,6 +109,7 @@ body {
 .card-context:hover {
   transform: scale(1.02);
   box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
+  transition: 0.5s;
 }
 .card-context {
   border: 1px solid rgb(234, 234, 234);
@@ -144,7 +157,7 @@ body {
 .button:hover {
   background-color: #f5df4d;
 }
-button::before {
+#card-btn::before {
   content: '';
   position: absolute;
   top: -5px;
@@ -152,7 +165,7 @@ button::before {
   bottom: -5px;
   left: -10px;
 }
-button {
+#card-btn {
   background-color: transparent;
   width: 90%;
   height: 30px;
@@ -161,7 +174,7 @@ button {
   font-size: 1rem;
   position: relative;
 }
-button:hover {
+#card-btn:hover {
   color: #fff;
 }
 /* pagination */
@@ -179,9 +192,22 @@ button:hover {
   color: #fff;
 }
 
+/* RWD */
 @media screen and (max-width: 992px) {
   .list {
     width: 100%;
     display: block;
   }
 }
+@media screen and (max-width: 576px) {
+  .banner {
+    display: block;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
