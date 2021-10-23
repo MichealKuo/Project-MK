@@ -15,7 +15,7 @@
 }
 .banner-left {
   width: 60%;
-  height: 400px;
+  height: 450px;
 }
 .banner-left > img {
   width: 100%;
@@ -41,15 +41,30 @@
 }
 .banner-text > h5 {
   font-size: 1rem;
-  font-weight: medium;
+  font-weight: 300;
   text-align: end;
 }
-/* RWD banner */
+/* RWD-banner */
+.RWD-banner {
+  display: none;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  letter-spacing: 5px;
+}
+.rwd-banner-text > p {
+  font-size: 1.5rem;
+  font-weight: medium;
+}
+.rwd-banner-text > h5 {
+  font-size: 1rem;
+  font-weight: 300;
+}
 
 /*  filter */
 .row-filter {
-  margin-top: 7%;
-  margin-bottom: 5%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   width: 100%;
 }
 .adopt-filter {
@@ -101,8 +116,8 @@ option {
 .row-map {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 iframe {
   width: 100%;
@@ -164,6 +179,8 @@ iframe {
 #card-text {
   font-size: 0.9rem;
   padding: 5px;
+  font-weight: 300;
+
 }
 /* button & hover */
 .button {
@@ -272,11 +289,16 @@ iframe {
     margin-left: auto;
     margin-right: auto;
   }
+  #ad-filter {
+    width: 175px;
+  }
   .selector {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+
   }
   .selector > p {
     background-color: #f5df4d;
@@ -287,5 +309,9 @@ iframe {
     margin-right: 15px;
     padding-top: 4px;
     padding-left: 1px;
+  }
+  .RWD-banner {
+    display: block;
+    justify-content: center;
   }
 }
