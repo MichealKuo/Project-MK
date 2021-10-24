@@ -11,6 +11,12 @@
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
     crossorigin="anonymous"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
     
     <style type="text/css">
     @import "/src/CSS/AdoptPage.css";
@@ -18,15 +24,90 @@
 </head>
 <body>
     <div class="container">
+        <!-- header -->
         <div class="row">
             <div class="header-title">
-                <p>貓咪認養資訊:</p>
-                <h6> 小憨</h6>
+                <p>貓咪認養資訊:<span class="title-text"> 小呆・小憨</span></p>
             </div>
         </div>
-        <div class="row avatar">
-            <div class="big-avatar"></div>
-            <div class="sm-avatar"></div>
+        <!-- avatar -->
+        <div class="row row-avatar">
+            <div class="big-avatar">
+                <img src="../images/adoptpage/adoptpage-01-01_300x300.jpeg" alt="">
+            </div>
+            <div class="sm-avatar">
+                <div class="sm-avatar">
+                    <img src="../images/adoptpage/adoptpage-01-02_300x300.jpeg" alt="">
+                </div>
+                <div class="sm-avatar">
+                    <img src="../images/adoptpage/adoptpage-01-03_300x300.jpeg" alt="">
+                </div>
+                <div class="sm-avatar">
+                    <img src="../images/adoptpage/adoptpage-01-04_300x300.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row row-detail">
+            <div class="detail">
+                <ul class="detail-ul">
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>狀態<span class="type-list">開放認養</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>姓名<span class="type-list">小呆・小憨</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>性別<span class="type-list">女孩</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>體型<span class="type-list">中型</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>電話<span class="type-list">0988123456</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>個性<span class="type-list">活潑好動、愛撒嬌</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>分類<span class="type-list">貓科</span></p>
+                    </li>
+                    <li class="detail-li col-12 col-sm-6 col-md-6 col-lg-6 ">
+                        <i class="fas fa-paw"></i>
+                        <p>地區<span class="type-list">台北</span></p>
+                    </li>
+                </ul>
+                <div class="detail-btn">
+                    <div class="button-G" type="submit">
+                        <div>
+                            <button id="card-btn"><span class="btn-mail">
+                                <i class="far fa-envelope"></i>
+                                </span>
+                                了解更多
+                            </button>
+                        </div>
+                    </div>
+                    <div class="button" type="submit">
+                        <div>
+                            <button id="card-btn"><span class="btn-heart">                        <i class="fas fa-heart"></i>
+                                </span>
+                                我要認養
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-comment">
+            <div class="comment">
+                
+            </div>
         </div>
     </div>
 </body>
