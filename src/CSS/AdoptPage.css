@@ -4,8 +4,21 @@
   font-family: 'Noto Sans CJK TC';
   box-sizing: border-box;
 }
-body {
+.container{
+  width: 100%;
+}
+.header-title{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-decoration: underline;
+  letter-spacing: 8px;
+  text-align: center;
+}
+.header-title>p{
+  font-size: 1.5rem;
+  font-weight: medium;
+
+}
+.header-title>h6{
+  font-size: 1rem;
+  font-weight: 300;
 }

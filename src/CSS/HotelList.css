@@ -128,16 +128,13 @@ iframe {
 
 .row-list {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 90%;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
 }
-.list {
-  display: flex;
-  justify-content: space-between;
-}
+
 .card {
-  flex: 0.3;
+  width: 100%;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -180,13 +177,14 @@ iframe {
   font-size: 0.9rem;
   padding: 5px;
   font-weight: 300;
+  width: 200px;
 
 }
 /* button & hover */
 .button {
   margin-top: 50px;
   margin-bottom: 80px;
-  width: 80%;
+  width: 200px;
   height: 35px;
   border: 1px solid #f5df4d;
   border-radius: 90px;
@@ -211,6 +209,7 @@ iframe {
   border: none;
   font-size: 1rem;
   position: relative;
+  text-align: center;
 }
 #card-btn:hover {
   color: #fff;
@@ -232,20 +231,8 @@ iframe {
 
 /* RWD */
 
-@media screen and (max-width: 992px) {
-  .list {
-    width: 100%;
-    display: block;
-  }
 
-  .selector > p {
-    background-color: #f5df4d;
-    border-radius: 90px;
-    width: 30px;
-    height: 30px;
-  }
-}
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 996px) {
   /* banner */
   .banner {
     display: flex;
@@ -277,6 +264,7 @@ iframe {
     -moz-appearance: none;
     appearance: none;
   }
+  
   #search-btn {
     width: 50px;
     height: 50px;
