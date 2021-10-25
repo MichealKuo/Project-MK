@@ -6,7 +6,7 @@
 }
 .container {
   width: 100%;
-  border: 1px solid rgb(159, 57, 57);
+
 }
 /* header */
 .header-title {
@@ -135,6 +135,163 @@ label {
 }
 
 
+/* roomService */
+.rowService{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.roomService{
+  width: 50%;
+}
+.creditCard{
+  width: 50%;
+}
+.service{
+  list-style: none;
+  display: flex;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+.service>li {
+  padding-left: 3rem;
+}
+
+.collapsible {
+  background-color: #f5df4d;
+  border-radius: 15px 15px 0 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.404);
+  
+}
+.content {
+  border-radius: 0 0 15px 15px;
+  padding: 0rem 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.201);
+
+}
+/* map */
+.row-map {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+iframe {
+  width: 80%;
+  height: 25rem;
+}
+
+/* hotel comment */
+.row-comment {
+  width: 80%;
+  margin: 10rem auto;
+  padding: 3rem 0;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
+}
+.comment {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom :1rem ;
+}
+.com-header{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.com-header-title {
+  font-size: 1.5rem;
+}
+.com-box {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.301);
+  margin-bottom: 1rem; ;
+}
+.start{
+  display: flex;
+  color: #f5df4d;
+  margin-bottom: 3px;
+}
+
+.comNameH{
+  font-size: 1rem;
+  margin-bottom: -10px;
+}
+.com-msn > h6 {
+  font-weight: 400;
+  word-wrap: 100%;
+}
+.com-user {
+  margin-top:5px ;
+}
+.com-avatar {
+  border-radius: 90px;
+  width: 60px;
+  height: 60px;
+  margin: 1rem;
+}
+.com-avatar > img {
+  border-radius: 90px;
+  width: 60px;
+  height: 60px;
+  object-fit: fill;
+}
+/* btn */
+#card-btn::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  bottom: -5px;
+  left: -10px;
+}
+#card-btn {
+  background-color: transparent;
+  width: 90%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+}
+#card-btn:hover {
+  color: #fff;
+}
+.commBtnH{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: end;
+}
+.comButton:hover {
+  background-color: #f5df4d;
+}
+.comButton {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #f5df4d;
+  border-radius: 90px;
+  text-align: center;
+}
+
+
+
+
 /* RWD */
 @media screen and (max-width: 992px) {
   .avatar {
@@ -151,4 +308,30 @@ label {
   .small-avatar {
     display: none;
   }
+  .row-comment{
+    width: 100%;
+  }
+  .comment{
+    width: 100%;
+  }
+  .roomService{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .creditCard{
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+  }
 }
+
+
+
+
+
+
+
+
+
