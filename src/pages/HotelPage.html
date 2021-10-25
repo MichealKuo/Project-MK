@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+    
+    
+    <title>HotelPage</title>
+    
+    <style type="text/css">
+    @import "/src/CSS/HotelPage.css";
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="header-title">
+                <p>旅宿明細:<span class="title-text"> 喵星球</span></p>
+            </div>
+        </div>
+        <!-- avatar -->
+        <div class="row row-avatar">
+            <div class="avatar col-12 col-md-12">
+                <div class="big-avatar">
+                    <img src="../images/adoptpage/adoptpage-01-01_300x300.jpeg" alt="">
+                </div>
+                <div class="small-avatar">
+                    <div class="sm-avatar">
+                        <img src="../images/adoptpage/adoptpage-01-02_300x300.jpeg" alt="">
+                    </div>
+                    <div class="sm-avatar">
+                        <img src="../images/adoptpage/adoptpage-01-03_300x300.jpeg" alt="">
+                    </div>
+                    <div class="sm-avatar">
+                        <img src="../images/adoptpage/adoptpage-01-04_300x300.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- booking form -->
+        <div class="row">
+            <div class="booking">
+                <!-- BANNER -->
+                <div class="bookBanner">
+                    <h2>登入會員</h2>
+                </div>
+                <div class="wrap">
+                    <form>
+                        <div class="form-group">
+                          <label for="bookin">入房時間</label>
+                          <input  type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="checkout">退房日期</label>
+                          <input  type="date" class="form-control"> 
+                        </div>
+                        <div class="form-group">
+                          <label for="count">人數</label>
+                          <input  type="count" class="form-control" placeholder="房客人數"> 
+                        </div>
+                        <div class="price">
+                            <div class="wrap">
+                                <div class="datePrice">
+                                    <p class="perCost">$1200 x 2 晚</p>
+                                    <p class="perCost">$2400</p>
+                                </div>
+                            </div>
+                            <div class="wrap">
+                                <div class="datePrice">
+                                    <p>總價</p>
+                                    <p>$2400</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn login">馬上預約</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- roomService -->
+        <div class="row">
+            <div class="roomService">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

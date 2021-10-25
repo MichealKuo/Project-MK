@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans CJK TC';
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  border: 1px solid rgb(159, 57, 57);
+}
+/* header */
+.header-title {
+  margin: 0 auto;
+  width: 65%;
+  letter-spacing: 8px;
+  text-align: start;
+  margin-top: 3rem;
+}
+.header-title > p {
+  font-size: 1.5rem;
+  font-weight: medium;
+}
+.title-text {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 50%;
+}
+
+/* hotel-avatar */
+
+.row-avatar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.avatar {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.big-avatar {
+  width: 65%;
+  margin-left: 2rem;
+}
+.big-avatar > img {
+  width: 100%;
+  object-fit: fill;
+  border-radius: 30px;
+}
+.small-avatar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.sm-avatar > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  object-fit: fill;
+}
+/* booking form */
+.booking {
+  width: 360px;
+  height: auto;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
+  /* text-align: center; */
+  padding: 0px 0 15px 0;
+  border-radius: 10px;
+  margin: 60px auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.bookBanner {
+  /* border-radius: 10px 10px 0 0; */
+  height: 70px;
+  background: #f5df4d;
+  /* background-size: 100% 35%; */
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+.bookBanner > h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+.form-group {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  font-size: 0.9rem;
+}
+.form-group > input {
+  font-size: 0.9rem;
+  font-weight: 300;
+  height: 30px !important;
+  width: 230px !important;
+  text-align: center;
+}
+
+.login {
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 120px;
+  background: #f5df4d;
+  border: 1px solid #f5df4d;
+  border-radius: 50pt;
+  width: 120px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+label {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+.login:hover {
+  color: white;
+  opacity: 0.7;
+}
+/* COST */
+
+.datePrice{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.perCost{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+/* RWD */
+@media screen and (max-width: 992px) {
+  .avatar {
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+  .big-avatar {
+    width: 100%;
+    margin: 0;
+  }
+  .big-avatar > img {
+    width: 100%;
+  }
+  .small-avatar {
+    display: none;
+  }
+}

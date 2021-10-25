@@ -6,13 +6,13 @@
 }
 .container {
   width: 100%;
-  border: 5px solid #000;
 }
 /* header */
 .header-title {
-  width: 100%;
+  width: 50%;
   letter-spacing: 8px;
-  text-align: center;
+  text-align: start;
+  margin: 0 auto;
 }
 .header-title > p {
   font-size: 1.5rem;
@@ -234,6 +234,7 @@
 
 
 
+
 /* RWD */
 @media screen and (max-width: 992px) {
   .row-avatar {
@@ -262,5 +263,11 @@
   .comment{
     width: 100%;
   }
-  
+  .commBtn{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
 }
