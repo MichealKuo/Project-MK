@@ -152,11 +152,16 @@ label {
   display: flex;
   margin-left: 2rem;
   padding-top: 1rem;
+  
 }
 .service>li {
   padding-left: 3rem;
+  
 }
-
+.detailIcon{
+  width: 40px;
+  height: 40px;
+}
 .collapsible {
   background-color: #f5df4d;
   border-radius: 15px 15px 0 0;
@@ -314,6 +319,9 @@ iframe {
   .comment{
     width: 100%;
   }
+  .rowService{
+    width: 100%;
+  }
   .roomService{
     width: 100%;
     display: flex;
@@ -324,14 +332,14 @@ iframe {
   }
   .content{
     width: 100%;
+    padding:0px;
+
+  }
+  .service{
+    padding-left:0; 
+    margin-left: 16px;
+
   }
 }
-
-
-
-
-
-
-
 
 
