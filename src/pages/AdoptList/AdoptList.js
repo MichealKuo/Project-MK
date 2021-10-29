@@ -5,7 +5,7 @@ import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 function AdoptList() {
   return (
     <>
-      <Container>
+      <Container fluid>
         {/* banner */}
         <Row>
           <div className="banner">
