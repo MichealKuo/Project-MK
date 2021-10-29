@@ -69,12 +69,12 @@ function HotelPage() {
                   <input type="date" class="form-control" />
                 </div>
                 <div class="bookFormGroup">
-                  <label for="count">人數</label>
-                  <input
-                    type="count"
-                    class="form-control"
-                    placeholder="房客人數"
-                  />
+                  <label for="count">狗</label>
+                  <input type="count" class="form-control" placeholder="數量" />
+                </div>
+                <div class="bookFormGroup">
+                  <label for="count">貓</label>
+                  <input type="count" class="form-control" placeholder="數量" />
                 </div>
                 <div class="price">
                   <div class="wrap">
@@ -231,7 +231,7 @@ function HotelPage() {
                     </div>
                     <div class="comMsn">
                       <h6>
-                        成貓真的要結紮！發情期會叫到無法睡覺，結紮也讓貓貓身體不會有一些賀爾蒙相關的疾病
+                        成貓真的要結紮！發情期會叫到無法睡覺，結紮也讓貓貓身體不會有一些賀爾蒙相關的疾病，這間旅宿結合獸醫進駐，真的解決很多不方便之處！
                       </h6>
                     </div>
                   </div>
@@ -263,7 +263,7 @@ function HotelPage() {
                     </div>
                     <div class="comMsn">
                       <h6>
-                        我是新手貓奴，上禮拜剛領養了一隻三花貓，對於打疫苗還是一知半解，看到這篇文章超受用！
+                        因為工作關係出差異地，臨時找不到人照顧毛小孩，無意見發現喵星球，除了環境優美員工訓練很客氣又專業，五星推薦！
                       </h6>
                     </div>
                   </div>
