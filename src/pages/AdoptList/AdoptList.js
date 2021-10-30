@@ -5,7 +5,7 @@ import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 function AdoptList() {
   return (
     <>
-      <Container>
+      <Container fluid>
         {/* banner */}
         <Row>
           <div className="banner">
@@ -53,15 +53,6 @@ function AdoptList() {
                   </select>
                 </div>
                 <div class="selector ">
-                  <p>體型</p>
-                  <select name="" id="ad-filter">
-                    <option value="">---請選擇---</option>
-                    <option value="">大型</option>
-                    <option value="">中型</option>
-                    <option value="">小型</option>
-                  </select>
-                </div>
-                <div class="selector ">
                   <p>地區</p>
                   <select name="" id="ad-filter">
                     <option value="">---請選擇---</option>
@@ -77,6 +68,11 @@ function AdoptList() {
                     <option value="">男孩</option>
                     <option value="">女孩</option>
                   </select>
+                </div>
+                <div class="selector " id="ad-filter">
+                  <button id="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
                 </div>
               </div>
             </div>

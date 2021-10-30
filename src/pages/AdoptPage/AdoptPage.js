@@ -4,6 +4,7 @@ import './AdoptPage.scss'
 // img src
 import AdoptPage1 from './adoptpage-01-01_300x300.jpeg'
 import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
+import ComAvatar2 from './adoptlist-02_300x300.jpg'
 
 function AdoptPage() {
   return (
@@ -136,7 +137,7 @@ function AdoptPage() {
                     <span class="btn-mail">
                       <i class="far fa-envelope"></i>
                     </span>
-                    了解更多
+                    私信飼主
                   </button>
                 </div>
               </div>
@@ -163,9 +164,9 @@ function AdoptPage() {
               <div class="comment">
                 <div class="com-box">
                   <div class="com-avatar">
-                    <span>
-                      <i class="fas fa-user"></i>
-                    </span>
+                    <div class="com-avatar">
+                      <img src={ComAvatar2} alt="" />
+                    </div>
                   </div>
                   <div class="com-user">
                     <div class="com-name">
@@ -180,9 +181,9 @@ function AdoptPage() {
               <div class="comment">
                 <div class="com-box">
                   <div class="com-avatar">
-                    <span>
-                      <i class="fas fa-user"></i>
-                    </span>
+                    <div class="com-avatar">
+                      <img src={AdoptPage1} alt="" />
+                    </div>
                   </div>
                   <div class="com-user">
                     <div class="com-name">
@@ -197,9 +198,9 @@ function AdoptPage() {
               <div class="comment">
                 <div class="com-box">
                   <div class="com-avatar">
-                    <span>
-                      <i class="fas fa-user"></i>
-                    </span>
+                    <div class="com-avatar">
+                      <img src={ComAvatar2} alt="" />
+                    </div>
                   </div>
                   <div class="com-user">
                     <div class="com-name">
