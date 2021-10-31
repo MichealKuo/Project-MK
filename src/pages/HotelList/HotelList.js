@@ -14,12 +14,21 @@ function HotelList() {
             </div>
             <div class="banner-right">
               <div class="banner-text">
+<<<<<<< HEAD
                 <h2>GO澡堂</h2>
                 <p>
                   在這裏讓毛孩享受
                   <br />
                   專屬的度假天堂！
                 </p>
+=======
+                <p>GO澡堂</p>
+                <h5>
+                  在這裏讓毛孩享受
+                  <br />
+                  專屬的度假天堂！
+                </h5>
+>>>>>>> 47f0ecb0bd08199bcfca8edb5f2320480ec69bbc
               </div>
             </div>
           </div>
