@@ -57,10 +57,21 @@ function AdoptPage() {
                   <i class="fas fa-paw"></i>
                 </li>
                 <li class="detail-title">
-                  <p>性別</p>
+                  <p>狀態</p>
                 </li>
                 <li class="detail-text">
-                  <p>女孩</p>
+                  <p>開放認養</p>
+                </li>
+              </ul>
+              <ul class="detail-ul">
+                <li class="detail-icon">
+                  <i class="fas fa-paw"></i>
+                </li>
+                <li class="detail-title">
+                  <p>種類</p>
+                </li>
+                <li class="detail-text">
+                  <p>貓咪</p>
                 </li>
               </ul>
               <ul class="detail-ul">
@@ -79,6 +90,17 @@ function AdoptPage() {
                   <i class="fas fa-paw"></i>
                 </li>
                 <li class="detail-title">
+                  <p>地區</p>
+                </li>
+                <li class="detail-text">
+                  <p>台北市</p>
+                </li>
+              </ul>
+              <ul class="detail-ul">
+                <li class="detail-icon">
+                  <i class="fas fa-paw"></i>
+                </li>
+                <li class="detail-title">
                   <p>電話</p>
                 </li>
                 <li class="detail-text">
@@ -90,43 +112,21 @@ function AdoptPage() {
                   <i class="fas fa-paw"></i>
                 </li>
                 <li class="detail-title">
+                  <p>性別</p>
+                </li>
+                <li class="detail-text">
+                  <p>女孩</p>
+                </li>
+              </ul>
+              <ul class="detail-ul">
+                <li class="detail-icon">
+                  <i class="fas fa-paw"></i>
+                </li>
+                <li class="detail-title">
                   <p>個性</p>
                 </li>
                 <li class="detail-text">
                   <p>活潑好動、愛撒嬌</p>
-                </li>
-              </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
-                </li>
-                <li class="detail-title">
-                  <p>分類</p>
-                </li>
-                <li class="detail-text">
-                  <p>貓科</p>
-                </li>
-              </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
-                </li>
-                <li class="detail-title">
-                  <p>地區</p>
-                </li>
-                <li class="detail-text">
-                  <p>台北</p>
-                </li>
-              </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
-                </li>
-                <li class="detail-title">
-                  <p>狀態</p>
-                </li>
-                <li class="detail-text">
-                  <p>開放認養</p>
                 </li>
               </ul>
             </div>

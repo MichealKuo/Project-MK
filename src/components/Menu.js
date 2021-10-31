@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap'
 
-import '../styles/menu.scss'
+import '../Styles/menu.scss'
 export default function menu() {
   return (
     <>

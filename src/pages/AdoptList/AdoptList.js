@@ -14,12 +14,12 @@ function AdoptList() {
             </div>
             <div className="banner-right">
               <div className="banner-text">
-                <p>毛孩找家</p>
-                <h5>
+                <h2>毛孩找家</h2>
+                <p>
                   你的一眼瞬間
                   <br />
                   就讓我有了被愛的機會
-                </h5>
+                </p>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ function AdoptList() {
             <div class="adopt-filter">
               <div class="filter">
                 <div class="selector">
-                  <p>品種</p>
+                  <p>種類</p>
                   <select name="" id="ad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">貓貓</option>

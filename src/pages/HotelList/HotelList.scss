@@ -10,7 +10,7 @@
   }
   /* banner style */
   .banner{
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
   }
   .banner-left {
@@ -35,13 +35,10 @@
     left: 20%;
   }
   .banner-text > p {
-    font-size: 1.5rem;
-    font-weight: medium;
+    font-size: 1rem;
     text-align: end;
   }
-  .banner-text > h5 {
-    font-size: 1rem;
-    font-weight: 300;
+  .banner-text > h2 {
     text-align: end;
   }
   /* RWD-banner */
