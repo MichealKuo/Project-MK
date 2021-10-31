@@ -35,10 +35,20 @@
     left: 20%;
   }
   .banner-text > p {
+<<<<<<< HEAD
     font-size: 1rem;
     text-align: end;
   }
   .banner-text > h2 {
+=======
+    font-size: 1.5rem;
+    font-weight: medium;
+    text-align: end;
+  }
+  .banner-text > h5 {
+    font-size: 1rem;
+    font-weight: 300;
+>>>>>>> 47f0ecb0bd08199bcfca8edb5f2320480ec69bbc
     text-align: end;
   }
   /* RWD-banner */
