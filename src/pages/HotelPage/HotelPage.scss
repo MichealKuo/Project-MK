@@ -290,7 +290,6 @@ iframe {
 
 /* RWD */
 @media screen and (max-width: 992px) {
-<<<<<<< HEAD
   .HotelAvatar {
     width: 100%;
     margin-bottom: 0rem;
@@ -309,24 +308,6 @@ iframe {
   }
   .HotelRowComment {
     width: 95%;
-=======
-  .avatar {
-    width: 100%;
-    margin-bottom: 6rem;
-  }
-  .big-avatar {
-    width: 100%;
-    margin: 0;
-  }
-  .big-avatar > img {
-    width: 100%;
-  }
-  .small-avatar {
-    display: none;
-  }
-  .row-comment {
-    width: 100%;
->>>>>>> 47f0ecb0bd08199bcfca8edb5f2320480ec69bbc
   }
   .comment {
     width: 100%;
