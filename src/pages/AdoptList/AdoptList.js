@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Pagination } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
+//data axios
+import Axios from 'axios'
 function AdoptList() {
+  // data axios
+  const [petList, setPetList] = useState([])
+  useEffect(() => {
+    Axios.get('http://localhost:3002/api/get').then((response) => {
+      setPetList(response.data)
+    })
+  }, [])
+
   return (
     <>
       <Container fluid>
@@ -81,236 +91,42 @@ function AdoptList() {
         {/* cards */}
         <Row>
           <div class="row-list">
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-01_300x300.jpg"
-                      alt=""
-                    />
+            <div class="list">
+              {petList.map((v, i) => {
+                return (
+                  <div class="card col-12 col-lg-4">
+                    <div class="card-context">
+                      <div class="avatar">
+                        <img src={v.avatar} alt="" />
+                      </div>
+                      <div class="">
+                        <p id="card-title">{v.name}</p>
+                        <p id="card-text"> {v.info}</p>
+                      </div>
+                    </div>
+                    <div class="button" type="submit">
+                      <div>
+                        <button id="card-btn">了解更多</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-02_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-03_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-01_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-02_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-03_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-01_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-02_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="card ">
-                <div class="card-context">
-                  <div class="avatar">
-                    <img
-                      src="../images/adoptlist/adoptlist-03_300x300.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="">
-                    <p id="card-title">小呆</p>
-                    <p id="card-text">
-                      {' '}
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，但實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                    </p>
-                  </div>
-                </div>
-                <div class="button" type="submit">
-                  <div>
-                    <button id="card-btn">了解更多</button>
-                  </div>
-                </div>
-              </div>
+                )
+              })}
             </div>
           </div>
         </Row>
         {/* pagination */}
+        <Row>
+          <div className="row-pagination">
+            <Pagination>
+              <Pagination.Prev />
+              <Pagination.Item>{1}</Pagination.Item>
+              <Pagination.Item>{2}</Pagination.Item>
+              <Pagination.Next />
+            </Pagination>
+          </div>
+        </Row>
       </Container>
-      <Row>
-        <div className="row-pagination">
-          <Pagination>
-            <Pagination.Prev />
-            <Pagination.Item>{1}</Pagination.Item>
-            <Pagination.Item>{2}</Pagination.Item>
-            <Pagination.Next />
-          </Pagination>
-        </div>
-      </Row>
     </>
   )
 }

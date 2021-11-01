@@ -96,19 +96,10 @@ option {
 }
 
 /* list  cards  */
-
-.row-list {
+.list {
   display: flex;
-  width: 80%;
   flex-wrap: wrap;
-  margin: auto;
-}
-
-.card {
-  width: 100%;
-  align-items: center;
-  border: none;
-  cursor: pointer;
+  justify-content: start;
 }
 .card-context:hover {
   transform: scale(1.02);
