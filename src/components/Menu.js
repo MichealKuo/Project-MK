@@ -13,13 +13,13 @@ export default function menu() {
               <Link to="/adoptlist">AdoptList</Link>
             </li>
             <li>
-              <Link to="/adoptsage">AdoptPage</Link>
+              <Link to="/adoptlist/adoptpage">AdoptPage</Link>
             </li>
             <li>
               <Link to="/hotellist">HotelList</Link>
             </li>
             <li>
-              <Link to="/hotelpage">HotelPage</Link>
+              <Link to="/hotellist/hotelpage">HotelPage</Link>
             </li>
             <li>
               <Link to="/upload">upload</Link>

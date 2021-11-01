@@ -56,9 +56,9 @@ function AdoptList() {
                   <p>地區</p>
                   <select name="" id="ad-filter">
                     <option value="">---請選擇---</option>
-                    <option value="">北部</option>
-                    <option value="">中部</option>
-                    <option value="">南部</option>
+                    <option value="">台北市</option>
+                    <option value="">新北市</option>
+                    <option value="">台中市</option>
                   </select>
                 </div>
                 <div class="selector">
