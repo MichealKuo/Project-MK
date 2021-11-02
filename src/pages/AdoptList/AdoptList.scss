@@ -4,62 +4,62 @@
   width: 100%;
 }
 /* banner style */
-.banner {
+.MKbanner {
   margin-top: 1rem;
   display: flex;
 }
-.banner-left {
+.MKbanner-left {
   flex: 6;
   height: 450px;
 }
-.banner-left > img {
+.MKbanner-left > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0 275px 275px 0;
 }
-.banner-right {
+.MKbanner-right {
   flex: 4;
   background: linear-gradient(to right, rgba(244, 244, 244, 0.4) 20%, #e5e5e5);
   border-radius: 275px 0 0 275px;
   position: relative;
 }
-.banner-text {
+.MKbanner-text {
   position: absolute;
   top: 40%;
   left: 20%;
 }
-.banner-text > p {
+.MKbanner-text > p {
   font-size: 1rem;
   text-align: end;
 }
-.banner-text > h2 {
+.MKbanner-text > h2 {
   text-align: end;
 }
 /* RWD-banner */
-.RWD-banner {
+.MKRWD-banner {
   display: none;
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 8rem;
   letter-spacing: px;
 }
-.rwd-banner-text > p {
+.MKrwd-banner-text > p {
   font-size: 1.5rem;
   font-weight: medium;
 }
-.rwd-banner-text > h5 {
+.MKrwd-banner-text > h5 {
   font-size: 1rem;
   font-weight: 300;
 }
 
 /* adopt filter */
-.rowFilter {
+.MKrowFilter {
   margin-top: 10rem;
   margin-bottom: 10rem;
   justify-content: center;
 }
-.filter {
+.MKfilter {
   margin-left: auto;
   margin-right: auto;
   padding-top: 1%;
@@ -71,11 +71,11 @@
   border-radius: 90px;
   flex-wrap: wrap;
 }
-.selector > p {
+.MKselector > p {
   margin-bottom: 0;
   font-size: 0.9rem;
 }
-select {
+.MKselector > select {
   border: 0;
   background-color: rgb(255, 255, 255);
   /* needed */
@@ -83,36 +83,54 @@ select {
   -moz-appearance: none;
   appearance: none;
 }
-select:focus {
+.MKselector > select:focus {
   outline: none;
 }
-option {
+.MKselector > select > option {
   color: #f5df4d;
 }
-#ad-filter {
+#MKad-filter {
   font-size: 0.9rem;
   text-align: center;
   width: 150px;
 }
 
 /* list  cards  */
-.list {
+.MKALrow-list {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
+  justify-content: space-evenly;
 }
-.card-context:hover {
+.MKALlist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.MKALcard {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.MKALcard-context:hover {
   transform: scale(1.02);
   box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
   transition: 0.5s;
 }
-.card-context {
+
+.MKALcard-context {
   border: 1px solid rgb(234, 234, 234);
   padding: 15px;
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
   border-radius: 10px;
+  width: 270px;
 }
-.avatar {
+.MKALavatar {
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -120,7 +138,7 @@ option {
   position: relative;
   margin: 0 auto;
 }
-.avatar > img {
+.MKALavatar > img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -128,21 +146,21 @@ option {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#card-title {
+#MKALcard-title {
   font-size: 1rem;
   font-weight: medium;
   margin-top: 10px;
   padding-left: 5px;
   padding-right: 5px;
 }
-#card-text {
+#MKALcard-text {
   font-size: 0.9rem;
   padding: 5px;
   font-weight: 300;
-  width: 200px;
+  width: 100%;
 }
 /* button & hover */
-.button {
+.MKALbutton {
   margin-top: 50px;
   margin-bottom: 80px;
   width: 200px;
@@ -151,39 +169,32 @@ option {
   border-radius: 90px;
   text-align: center;
 }
-.button:hover {
+.MKALbutton:hover {
   background-color: #f5df4d;
 }
-#card-btn::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  bottom: -5px;
-  left: -10px;
-}
-#card-btn {
+
+#MKALcard-btn {
   background-color: transparent;
-  width: 90%;
+  width: 100%;
   height: 30px;
   color: #646464;
   border: none;
   font-size: 1rem;
-  position: relative;
+  // position: relative;
 }
-#card-btn:hover {
+#MKALcard-btn:hover {
   color: #fff;
 }
 /* pagination */
 
-.row-pagination {
+.MKrow-pagination {
   display: flex;
   justify-content: center;
 }
-.page-link {
+.MKpage-link {
   color: #646464;
 }
-.page-link:hover {
+.MKpage-link:hover {
   background-color: #f5df4d;
   color: #fff;
 }
@@ -191,34 +202,34 @@ option {
 /* RWD */
 
 @media screen and (max-width: 992px) {
-  .banner {
+  .MKbanner {
     display: flex;
     flex-wrap: wrap;
   }
-  .banner-left {
+  .MKbanner-left {
     width: 100%;
   }
-  .banner-right {
+  .MKbanner-right {
     display: none;
   }
-  .filter {
+  .MKfilter {
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
     background-color: #fff;
   }
 
-  #ad-filter {
+  #MKad-filter {
     width: 175px;
   }
-  .selector {
+  .MKselector {
     display: flex;
     width: 100%;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
   }
-  .selector > p {
+  .MKselector > p {
     background-color: #f5df4d;
     border-radius: 90px;
     width: 30px;
@@ -228,11 +239,11 @@ option {
     padding-top: 4px;
     padding-left: 1px;
   }
-  .RWD-banner {
+  .MKRWD-banner {
     display: block;
     justify-content: center;
   }
-  select {
+  .MKselector > select {
     border: 1px solid #f5df4d;
     background-color: rgb(255, 255, 255);
     border-radius: 90px;
@@ -241,10 +252,7 @@ option {
     -moz-appearance: none;
     appearance: none;
   }
-  .selector > p {
-    background-color: #f5df4d;
-    border-radius: 90px;
-    width: 30px;
-    height: 30px;
+  .MKALrow-list {
+    width: 100%;
   }
 }

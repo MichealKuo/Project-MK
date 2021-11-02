@@ -12,26 +12,26 @@ function AdoptPage() {
       <Container>
         {/* header */}
         <Row>
-          <div class="header-title">
+          <div className="MKheader-title">
             <p>
-              貓咪認養資訊:<span class="title-text"> 小呆・小憨</span>
+              貓咪認養資訊:<span className="MKtitle-text"> 小呆・小憨</span>
             </p>
           </div>
         </Row>
         {/* avatar */}
         <Row>
-          <div class="rowAvatar">
-            <div class="adoptPageAvatar ">
+          <div className="MKrowAvatar">
+            <div className="MKadoptPageAvatar ">
               <img src={AdoptPage1} alt="" />
             </div>
-            <div class="small-avatar">
-              <div class="sm-avatar">
+            <div className="MKsmall-avatar">
+              <div className="MKsm-avatar">
                 <img src={AdoptPage2} alt="" />
               </div>
-              <div class="sm-avatar">
+              <div className="MKsm-avatar">
                 <img src={AdoptPage2} alt="" />
               </div>
-              <div class="sm-avatar">
+              <div className="MKsm-avatar">
                 <img src={AdoptPage2} alt="" />
               </div>
             </div>
@@ -39,184 +39,184 @@ function AdoptPage() {
         </Row>
         {/* Detail Box */}
         <Row>
-          <div class="rowDetail">
-            <div class="detail">
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+          <div className="MKrowDetail">
+            <div className="MKdetail">
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>姓名</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>小呆・小憨</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>狀態</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>開放認養</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>種類</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>貓咪</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>體型</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>中型</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>地區</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>台北市</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>電話</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>0988123456</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>性別</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>女孩</p>
                 </li>
               </ul>
-              <ul class="detail-ul">
-                <li class="detail-icon">
-                  <i class="fas fa-paw"></i>
+              <ul className="MKdetail-ul">
+                <li className="MKdetail-icon">
+                  <i className="fas fa-paw"></i>
                 </li>
-                <li class="detail-title">
+                <li className="MKdetail-title">
                   <p>個性</p>
                 </li>
-                <li class="detail-text">
+                <li className="MKdetail-text">
                   <p>活潑好動、愛撒嬌</p>
                 </li>
               </ul>
             </div>
-            <div class="detail-btn">
-              <div class="button-G" type="submit">
+            <div className="MKdetail-btn">
+              <div className="MKbutton-G" type="submit">
                 <div>
-                  <button id="card-btn">
-                    <span class="btn-mail">
-                      <i class="far fa-envelope"></i>
+                  <button id="MKcard-btn">
+                    <span className="MKbtn-mail">
+                      <i className="far fa-envelope"></i>
                     </span>
                     私信飼主
                   </button>
                 </div>
               </div>
-              <div class="buttonAdopt" type="submit">
+              {/* <div className="MKbuttonAdopt" type="submit">
                 <div>
-                  <button id="card-btn">
-                    <span class="btn-heart">
-                      <i class="fas fa-heart"></i>
+                  <button id="MKcard-btn">
+                    <span className="MKbtn-heart">
+                      <i className="fas fa-heart"></i>
                     </span>
                     我要認養
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </Row>
         {/* Comments */}
         <Row>
-          <div class="rowComment">
-            <div class="comm">
-              <div class="com-header">
-                <h6 class="com-header-title">留言板</h6>
+          <div className="MKrowComment">
+            <div className="MKcomm">
+              <div className="MKcom-header">
+                <h6 className="MKcom-header-title">留言板</h6>
               </div>
-              <div class="comment">
-                <div class="com-box">
-                  <div class="com-avatar">
-                    <div class="com-avatar">
+              <div className="MKcomment">
+                <div className="MKcom-box">
+                  <div className="MKcom-avatar">
+                    <div className="MKcom-avatar">
                       <img src={ComAvatar2} alt="" />
                     </div>
                   </div>
-                  <div class="com-user">
-                    <div class="com-name">
+                  <div className="MKcom-user">
+                    <div className="MKcom-name">
                       <p>我是貓奴</p>
                     </div>
-                    <div class="com-msn">
+                    <div className="MKcom-msn">
                       <h6>Hi,想和你約時間看小呆</h6>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="comment">
-                <div class="com-box">
-                  <div class="com-avatar">
-                    <div class="com-avatar">
+              <div className="MKcomment">
+                <div className="MKcom-box">
+                  <div className="MKcom-avatar">
+                    <div className="MKcom-avatar">
                       <img src={AdoptPage1} alt="" />
                     </div>
                   </div>
-                  <div class="com-user">
-                    <div class="com-name">
+                  <div className="MKcom-user">
+                    <div className="MKcom-name">
                       <p>小呆僕人</p>
                     </div>
-                    <div class="com-msn">
+                    <div className="MKcom-msn">
                       <h6>好呀，這週六可以嗎？</h6>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="comment">
-                <div class="com-box">
-                  <div class="com-avatar">
-                    <div class="com-avatar">
+              <div className="MKcomment">
+                <div className="MKcom-box">
+                  <div className="MKcom-avatar">
+                    <div className="MKcom-avatar">
                       <img src={ComAvatar2} alt="" />
                     </div>
                   </div>
-                  <div class="com-user">
-                    <div class="com-name">
+                  <div className="MKcom-user">
+                    <div className="MKcom-name">
                       <p>我是貓奴</p>
                     </div>
-                    <div class="com-msn">
+                    <div className="MKcom-msn">
                       <h6>okay</h6>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="commBtn">
-              <div class="comButton" type="submit">
+            <div className="MKcommBtn">
+              <div className="MKcomButton" type="submit">
                 <div>
-                  <button id="card-btn">我要回覆</button>
+                  <button id="MKcard-btn">我要回覆</button>
                 </div>
               </div>
             </div>

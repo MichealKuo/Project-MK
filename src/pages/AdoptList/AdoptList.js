@@ -8,7 +8,7 @@ function AdoptList() {
   // data axios
   const [petList, setPetList] = useState([])
   useEffect(() => {
-    Axios.get('http://localhost:3002/api/get').then((response) => {
+    Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
       setPetList(response.data)
     })
   }, [])
@@ -18,12 +18,12 @@ function AdoptList() {
       <Container fluid>
         {/* banner */}
         <Row>
-          <div className="banner">
-            <div className="banner-left">
+          <div className="MKbanner">
+            <div className="MKbanner-left">
               <img src={AdoptListBanner} alt="" />
             </div>
-            <div className="banner-right">
-              <div className="banner-text">
+            <div className="MKbanner-right">
+              <div className="MKbanner-text">
                 <h2>毛孩找家</h2>
                 <p>
                   你的一眼瞬間
@@ -36,8 +36,8 @@ function AdoptList() {
         </Row>
         {/* RWD-Banner */}
         <Row>
-          <div className="RWD-banner">
-            <div className="rwd-banner-text">
+          <div className="MKRWD-banner">
+            <div className="MKrwd-banner-text">
               <p>毛孩找家</p>
               <br />
               <h5>
@@ -51,37 +51,37 @@ function AdoptList() {
         </Row>
         {/* filter */}
         <Row>
-          <div class="rowFilter">
-            <div class="adopt-filter">
-              <div class="filter">
-                <div class="selector">
+          <div className="MKrowFilter">
+            <div className="MKadopt-filter">
+              <div className="MKfilter">
+                <div className="MKselector">
                   <p>種類</p>
-                  <select name="" id="ad-filter">
+                  <select name="" id="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">貓貓</option>
                     <option value="">狗狗</option>
                   </select>
                 </div>
-                <div class="selector ">
+                <div className="MKselector ">
                   <p>地區</p>
-                  <select name="" id="ad-filter">
+                  <select name="" id="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">台北市</option>
                     <option value="">新北市</option>
                     <option value="">台中市</option>
                   </select>
                 </div>
-                <div class="selector">
+                <div className="MKselector">
                   <p>性別</p>
-                  <select name="" id="ad-filter">
+                  <select name="" id="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">男孩</option>
                     <option value="">女孩</option>
                   </select>
                 </div>
-                <div class="selector " id="ad-filter">
-                  <button id="search-btn" type="submit">
-                    <i class="fas fa-search"></i>
+                <div className="MKselector " id="MKad-filter">
+                  <button id="MKsearch-btn" type="submit">
+                    <i className="fas fa-search"></i>
                   </button>
                 </div>
               </div>
@@ -90,23 +90,23 @@ function AdoptList() {
         </Row>
         {/* cards */}
         <Row>
-          <div class="row-list">
-            <div class="list">
+          <div className="MKALrow-list">
+            <div className="MKALlist">
               {petList.map((v, i) => {
                 return (
-                  <div class="card col-12 col-lg-4">
-                    <div class="card-context">
-                      <div class="avatar">
+                  <div className=" MKALcard col-12 col-lg-4" >
+                    <div className="MKALcard-context">
+                      <div className="MKALavatar">
                         <img src={v.avatar} alt="" />
                       </div>
-                      <div class="">
-                        <p id="card-title">{v.name}</p>
-                        <p id="card-text"> {v.info}</p>
+                      <div className="">
+                        <p id="MKALcard-title">{v.name}</p>
+                        <p id="MKALcard-text"> {v.info}</p>
                       </div>
                     </div>
-                    <div class="button" type="submit">
+                    <div className="MKALbutton" type="submit">
                       <div>
-                        <button id="card-btn">了解更多</button>
+                        <button id="MKALcard-btn">了解更多</button>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ function AdoptList() {
         </Row>
         {/* pagination */}
         <Row>
-          <div className="row-pagination">
+          <div className="MKrow-pagination">
             <Pagination>
               <Pagination.Prev />
               <Pagination.Item>{1}</Pagination.Item>

@@ -8,17 +8,17 @@
   width: 100%;
 }
 /* header */
-.HotelHeaderTitle {
+.MKHotelHeaderTitle {
   margin: 0 auto;
   width: 70%;
   letter-spacing: 5px;
   text-align: start;
 }
-.HotelHeaderTitle > p {
+.MKHotelHeaderTitle > p {
   font-size: 1.5rem;
   font-weight: medium;
 }
-.title-text {
+.MKtitle-text {
   font-size: 1rem;
   font-weight: 300;
   width: 50%;
@@ -26,138 +26,139 @@
 
 /* hotel-avatar */
 
-.HotelRowAvatar {
+.MKHotelRowAvatar {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
 }
-.HotelAvatar {
+.MKHotelAvatar {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
 }
-.bigHotelAvatar {
+.MKbigHotelAvatar {
   width: 55%;
   margin-left: 2rem;
 }
-.bigHotelAvatar > img {
+.MKbigHotelAvatar > img {
   width: 100%;
   object-fit: fill;
   border-radius: 30px;
 }
-.smallHotelAvatar {
+.MKsmallHotelAvatar {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
-.smallHotelAvatar > img {
+.MKsmallHotelAvatar > img {
   width: 120px;
   height: 120px;
   border-radius: 30px;
   object-fit: fill;
 }
 /* booking form */
-.booking {
-  width: 360px;
-  height: auto;
-  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
-  /* text-align: center; */
-  padding: 0px 0 15px 0;
-  border-radius: 10px;
-  margin: 10rem auto;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-.bookBanner {
-  /* border-radius: 10px 10px 0 0; */
-  height: 70px;
-  background: #f5df4d;
-  /* background-size: 100% 35%; */
-  background-size: cover;
-  margin-bottom: 1rem;
-}
-.bookBanner > h2 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  padding-top: 1.5rem;
-  text-align: center;
-}
-.bookFormGroup {
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
-  margin-right: 4rem;
-  margin-left: 4rem;
-  font-size: 0.9rem;
-}
-.bookFormGroup > input {
-  font-size: 0.9rem;
-  font-weight: 300;
-  height: 30px !important;
-  width: 230px !important;
-  // text-align: center;
-}
+// .MKbooking {
+//   width: 360px;
+//   height: auto;
+//   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
+//   /* text-align: center; */
+//   padding: 0px 0 15px 0;
+//   border-radius: 10px;
+//   margin: 10rem auto;
+//   overflow: hidden;
+//   background-color: #ffffff;
+// }
+// .MKbookBanner {
+//   /* border-radius: 10px 10px 0 0; */
+//   height: 70px;
+//   background: #f5df4d;
+//   /* background-size: 100% 35%; */
+//   background-size: cover;
+//   margin-bottom: 1rem;
+// }
+// .MKbookBanner > h2 {
+//   font-size: 1.5rem;
+//   color: #ffffff;
+//   padding-top: 1.5rem;
+//   text-align: center;
+// }
+// .MKbookFormGroup {
+//   margin-top: 0.5rem;
+//   margin-bottom: 1.2rem;
+//   margin-right: 4rem;
+//   margin-left: 4rem;
+//   font-size: 0.9rem;
+// }
+// .MKbookFormGroup > input {
+//   font-size: 0.9rem;
+//   font-weight: 300;
+//   height: 30px !important;
+//   width: 230px !important;
+//   // text-align: center;
+// }
 
-.login {
-  color: white;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-left: 120px;
-  background: #f5df4d;
-  border: 1px solid #f5df4d;
-  border-radius: 50pt;
-  width: 120px;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
-}
+// .MKlogin {
+//   color: white;
+//   margin-top: 0.5rem;
+//   margin-bottom: 0.5rem;
+//   margin-left: 120px;
+//   background: #f5df4d;
+//   border: 1px solid #f5df4d;
+//   border-radius: 50pt;
+//   width: 120px;
+//   font-size: 0.9rem;
+//   line-height: 1.2rem;
+// }
 
-label {
-  margin-bottom: 0;
-  font-size: 0.9rem;
-}
-.login:hover {
-  color: white;
-  opacity: 0.7;
-}
-/* COST */
+// label {
+//   margin-bottom: 0;
+//   font-size: 0.9rem;
+// }
+// .MKlogin:hover {
+//   color: white;
+//   opacity: 0.7;
+// }
+// /* COST */
 
-.datePrice {
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+// .MKdatePrice {
+//   width: 60%;
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: space-between;
+// }
 
-.perCost {
-  font-size: 0.9rem;
-  font-weight: 300;
-}
+// .MKperCost {
+//   font-size: 0.9rem;
+//   font-weight: 300;
+// }
 
 /* roomService */
-.rowService {
+.MKrowService {
   display: flex;
   width: 70%;
   margin: 0 auto;
+  margin-top: 10rem;
 }
-.roomService {
+.MKroomService {
   width: 50%;
 }
-.creditCard {
+.MKcreditCard {
   width: 50%;
 }
-.service {
+.MKservice {
   list-style: none;
   display: flex;
   margin-left: 2rem;
   padding-top: 1rem;
 }
-.service > li {
+.MKservice > li {
   padding-left: 3rem;
 }
-.detailIcon {
+.MKdetailIcon {
   width: 40px;
   height: 40px;
 }
-.collapsible {
+.MKcollapsible {
   background-color: #f5df4d;
   border-radius: 15px 15px 0 0;
   color: #fff;
@@ -168,11 +169,11 @@ label {
   outline: none;
   font-size: 15px;
 }
-.active,
-.collapsible:hover {
+.MKactive,
+.MKcollapsible:hover {
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.404);
 }
-.content {
+.MKcontent {
   border-radius: 0 0 15px 15px;
   padding: 0rem 18px;
   background-color: white;
@@ -182,83 +183,76 @@ label {
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.201);
 }
 /* map */
-.row-map {
+.MKrow-map {
   display: flex;
   justify-content: center;
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
-iframe {
+.MKrow-map > iframe {
   width: 80%;
   height: 25rem;
 }
 
 /* hotel comment */
-.HotelRowComment {
+.MKHotelRowComment {
   width: 65%;
   margin: 10rem auto;
   padding: 3rem 0;
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
 }
-.HotelComm {
+.MKHotelComm {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
-.com-header {
+.MKcom-header {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
-.com-header-title {
+.MKcom-header-title {
   font-size: 1.5rem;
 }
-.com-box {
+.MKcom-box {
   display: flex;
   width: 100%;
   padding: 1rem;
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.301);
   margin-bottom: 1rem;
 }
-.start {
+.MKstart {
   display: flex;
   color: #f5df4d;
   margin-bottom: 3px;
 }
 
-.comNameH {
+.MKcomNameH {
   font-size: 1rem;
   margin-bottom: -10px;
 }
-.comMsn > h6 {
+.MKcomMsn > h6 {
   font-weight: 400;
   word-wrap: 100%;
 }
-.com-user {
+.MKcom-user {
   margin-top: 5px;
 }
-.com-avatar {
+.MKcom-avatar {
   border-radius: 90px;
   width: 60px;
   height: 60px;
   margin: 1rem;
 }
-.com-avatar > img {
+.MKcom-avatar > img {
   border-radius: 90px;
   width: 60px;
   height: 60px;
   object-fit: fill;
 }
 /* btn */
-#card-btn::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  bottom: -5px;
-  left: -10px;
-}
-#card-btn {
+
+#MKcard-btn {
   background-color: transparent;
   width: 90%;
   height: 30px;
@@ -267,20 +261,20 @@ iframe {
   font-size: 1rem;
   position: relative;
 }
-#card-btn:hover {
+#MKcard-btn:hover {
   color: #fff;
 }
-.commBtnH {
+.MKcommBtnH {
   width: 80%;
   margin: 0 auto;
   margin-top: 3rem;
   display: flex;
   justify-content: end;
 }
-.comButton:hover {
+.MKcomButton:hover {
   background-color: #f5df4d;
 }
-.comButton {
+.MKcomButton {
   width: 200px;
   height: 35px;
   border: 1px solid #f5df4d;
@@ -290,48 +284,48 @@ iframe {
 
 /* RWD */
 @media screen and (max-width: 992px) {
-  .HotelAvatar {
+  .MKHotelAvatar {
     width: 100%;
     margin-bottom: 0rem;
     padding: 0;
   }
-  .bigHotelAvatar {
+  .MKbigHotelAvatar {
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  .bigHotelAvatar > img {
+  .MKbigHotelAvatar > img {
     width: 100%;
   }
-  .smallHotelAvatar {
+  .MKsmallHotelAvatar {
     display: none;
   }
-  .HotelRowComment {
+  .MKHotelRowComment {
     width: 95%;
   }
-  .comment {
+  .MKcomment {
     width: 100%;
   }
-  .rowService {
+  .MKrowService {
     width: 100%;
   }
-  .roomService {
+  .MKroomService {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .creditCard {
+  .MKcreditCard {
     width: 100%;
   }
-  .content {
+  .MKcontent {
     width: 100%;
     padding: 0px;
   }
-  .service {
+  .MKservice {
     padding-left: 0;
     margin-left: 16px;
   }
-  .commBtnH {
+  .MKcommBtnH {
     margin: 0;
     margin-top: 5rem;
   }
