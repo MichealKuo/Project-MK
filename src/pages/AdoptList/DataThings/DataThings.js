@@ -3,9 +3,8 @@ import './dataThings.scss'
 import Axios from 'axios'
 
 function DataThings(props) {
-  const { AdoptList, setAdoptList } = props
-  // const [Name, setName] = useState('')
-  // const [Type, setType] = useState('')
+  const [Name, setName] = useState('')
+  const [Type, setType] = useState('')
   const [petList, setPetList] = useState([])
 
   useEffect(() => {
@@ -13,16 +12,16 @@ function DataThings(props) {
       setPetList(response.data)
     })
   }, [])
-  // const submitReview = () => {
-  //   Axios.post('http://localhost:3002/api/insert', { Name, Type }).then(() => {
-  //     alert('1234214')
-  //   })
-  // }
+  const submitReview = () => {
+    Axios.post('http://localhost:3002/api/insert', { Name, Type }).then(() => {
+      alert('1234214')
+    })
+  }
 
   return (
     <>
-      <div className="FormUpload">
-        {/* <div className="upLoad ">
+      <div className="MKFormUpload">
+        <div className="MKupLoad ">
           <label>name</label>
           <input
             type="text"
@@ -42,16 +41,16 @@ function DataThings(props) {
         </div>
         <div>
           <button onClick={submitReview}>submit</button>
-        </div> */}
+        </div>
         <div>
           {petList.map((v, i) => {
             return (
               <h1>
-                key={petList.id}
-                name={petList.name}
-                type={petList.type}
-                avatar={petList.avatar}
-                location={petList.location}
+                key={v.id}
+                name={v.name}
+                type={v.type}
+                avatar={v.avatar}
+                location={v.location}
               </h1>
             )
           })}
