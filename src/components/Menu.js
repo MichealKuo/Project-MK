@@ -25,9 +25,7 @@ export default function menu() {
                 HotelPage
               </Link>
             </li>
-            <li>
-              <Link to="/upload">upload</Link>
-            </li>
+            <li>{/* <Link to="/upload">upload</Link> */}</li>
           </ul>
         </Row>
       </Container>
