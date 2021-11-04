@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Pagination } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
+import { withRouter } from 'react-router-dom'
+
 //data axios
 import Axios from 'axios'
 function AdoptList() {
@@ -94,7 +96,7 @@ function AdoptList() {
             <div className="MKALlist">
               {petList.map((v, i) => {
                 return (
-                  <div className=" MKALcard col-12 col-lg-4" >
+                  <div className=" MKALcard col-12 col-lg-4">
                     <div className="MKALcard-context">
                       <div className="MKALavatar">
                         <img src={v.avatar} alt="" />
@@ -131,4 +133,4 @@ function AdoptList() {
   )
 }
 
-export default AdoptList
+export default withRouter(AdoptList)

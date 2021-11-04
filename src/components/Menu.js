@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap'
-
 import '../Styles/menu.scss'
 export default function menu() {
   return (
@@ -13,19 +12,17 @@ export default function menu() {
               <Link to="/adoptlist">AdoptList</Link>
             </li>
             <li>
-              <Link exact to="/adoptlist/adoptpage">
-                AdoptPage
-              </Link>
+              <Link to="/adoptlist/adoptpage">AdoptPage</Link>
             </li>
             <li>
               <Link to="/hotellist">HotelList</Link>
             </li>
             <li>
-              <Link exact to="/hotellist/hotelpage">
-                HotelPage
-              </Link>
+              <Link to="/hotellist/hotelpage">HotelPage</Link>
             </li>
-            <li>{/* <Link to="/upload">upload</Link> */}</li>
+            <li>
+              <Link to="/upload">upload</Link>
+            </li>
           </ul>
         </Row>
       </Container>

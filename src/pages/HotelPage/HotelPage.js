@@ -4,6 +4,7 @@ import './HotelPage.scss'
 import HotelPagePic from './hotelpage-01-01_300x300.jpeg'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
+import { withRouter } from 'react-router-dom'
 
 function HotelPage() {
   // const coll = document.getElementsByclassNameName('collapsible')
@@ -291,4 +292,4 @@ function HotelPage() {
   )
 }
 
-export default HotelPage
+export default withRouter(HotelPage)

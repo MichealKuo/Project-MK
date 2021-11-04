@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './AdoptPage.scss'
 // img src
+import { withRouter } from 'react-router-dom'
+
 import AdoptPage1 from './adoptpage-01-01_300x300.jpeg'
 import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
@@ -227,4 +229,4 @@ function AdoptPage() {
   )
 }
 
-export default AdoptPage
+export default withRouter(AdoptPage)

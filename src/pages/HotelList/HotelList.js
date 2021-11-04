@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Pagination } from 'react-bootstrap'
 import './HotelList.scss'
 import HotelListBanner from './hotellist-banner_300x300.jpg'
+import { withRouter } from 'react-router-dom'
 
 // data
 import Axios from 'axios'
@@ -173,4 +174,4 @@ function HotelList() {
   )
 }
 
-export default HotelList
+export default withRouter(HotelList)

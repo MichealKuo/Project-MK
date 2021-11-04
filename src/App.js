@@ -4,7 +4,7 @@ import AdoptList from './pages/AdoptList/AdoptList'
 import AdoptPage from './pages/AdoptPage/AdoptPage'
 import HotelList from './pages/HotelList/HotelList'
 import HotelPage from './pages/HotelPage/HotelPage'
-import DataThings from './pages/AdoptList/DataThings/DataThings'
+import DataThings from './pages/DataThings/DataThings'
 
 import Menu from './components/Menu'
 
@@ -20,10 +20,10 @@ function App() {
         <MultiLevelBreadCrumb />
         <Menu />
         <Switch>
-          <Route exact path="/adoptlist/adoptpage">
+          <Route path="/adoptlist/adoptpage">
             <AdoptPage />
           </Route>
-          <Route exact path="/hotellist/hotelpage">
+          <Route path="/hotellist/hotelpage">
             <HotelPage />
           </Route>
           <Route path="/adoptlist">
@@ -32,9 +32,9 @@ function App() {
           <Route path="/hotellist">
             <HotelList />
           </Route>
-          <Route path="/upload">
+          {/* <Route path="/upload">
             <DataThings />
-          </Route>
+          </Route> */}
         </Switch>
         {/* end 匹配路由表 */}
         <MyFooter />

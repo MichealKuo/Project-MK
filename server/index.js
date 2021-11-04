@@ -1,8 +1,11 @@
 const express = require('express')
-
+const multer = require('multer')
 const cors = require('cors')
 const app = express()
 const mysql = require('mysql')
+//another
+const fs = require('fs')
+const path = require('path')
 //連database
 const db = mysql.createPool({
   host: 'localhost',
@@ -10,13 +13,21 @@ const db = mysql.createPool({
   password: 'admin',
   database: 'pet-project',
 })
-app.use(cors())
+//cors
+const corsOptions = {
+  credentials: true,
+  origin: (origin, cb) => {
+    console.log(`origin: ${origin}`)
+    cb(null, true)
+  },
+}
+
+app.use(cors(corsOptions))
+
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
 //get petlist
 app.get('/api/getpetlist', (req, res) => {
-  const Name = req.body.Name
-  const Type = req.body.Type
   const sqlInsert = 'SELECT * FROM petlist '
   db.query(sqlInsert, (err, result) => {
     res.send(result)
@@ -25,22 +36,13 @@ app.get('/api/getpetlist', (req, res) => {
 })
 //get hotel list
 app.get('/api/gethotellist', (req, res) => {
-  const Name = req.body.Name
-  const Type = req.body.Type
   const sqlInsert = 'SELECT * FROM hotellist '
   db.query(sqlInsert, (err, result) => {
     res.send(result)
     console.log(err)
   })
 })
-app.post('/api/insert', (req, res) => {
-  const Name = req.body.name
-  const Type = req.body.type
-  const sqlInsert = 'INSERT INTO `petlist`( `name`, `type`) VALUES (Null,?,?)'
-  db.query(sqlInsert, [Name, Type], (err, result) => {
-    console.log(err)
-  })
-})
+
 app.listen(3002, () => {
   console.log('running on port 3002')
 })
