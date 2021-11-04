@@ -96,22 +96,24 @@
 }
 
 /* list  cards  */
+
 .MKALrow-list {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .MKALlist {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 0 auto;
+}
+.MKDisplayLi {
+  list-style: none;
 }
 
 .MKALcard {
-  width: 350px;
+  // width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;

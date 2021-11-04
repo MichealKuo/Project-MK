@@ -119,25 +119,22 @@
 
 /* list  cards  */
 
-
 .MKrow-list {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-
 }
 .MKlist {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
-
+.MKDisplayLi {
+  list-style: none;
+}
 .MKcard {
-  width: 350px;
+  // width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -211,7 +208,6 @@
 #MKcard-btn:hover {
   color: #fff;
 }
-
 
 /* pagination */
 

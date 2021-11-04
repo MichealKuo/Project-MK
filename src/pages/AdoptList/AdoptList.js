@@ -96,22 +96,24 @@ function AdoptList() {
             <div className="MKALlist">
               {petList.map((v, i) => {
                 return (
-                  <div className=" MKALcard col-12 col-lg-4">
-                    <div className="MKALcard-context">
-                      <div className="MKALavatar">
-                        <img src={v.avatar} alt="" />
+                  <p key={i} className="MKDisplayLi col-12 col-lg-4">
+                    <div className=" MKALcard ">
+                      <div className="MKALcard-context">
+                        <div className="MKALavatar">
+                          <img src={v.avatar} alt="" />
+                        </div>
+                        <div className="">
+                          <p id="MKALcard-title">{v.name}</p>
+                          <p id="MKALcard-text"> {v.info}</p>
+                        </div>
                       </div>
-                      <div className="">
-                        <p id="MKALcard-title">{v.name}</p>
-                        <p id="MKALcard-text"> {v.info}</p>
+                      <div className="MKALbutton" type="submit">
+                        <div>
+                          <button id="MKALcard-btn">了解更多</button>
+                        </div>
                       </div>
                     </div>
-                    <div className="MKALbutton" type="submit">
-                      <div>
-                        <button id="MKALcard-btn">了解更多</button>
-                      </div>
-                    </div>
-                  </div>
+                  </p>
                 )
               })}
             </div>

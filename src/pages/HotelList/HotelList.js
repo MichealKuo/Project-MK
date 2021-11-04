@@ -108,29 +108,31 @@ function HotelList() {
           <div className="MKrow-list">
             {hotelList.map((v, i) => {
               return (
-                <div className="MKcard col-12 col-lg-4">
-                  <div className="MKcard-context">
-                    <div className="MKavatar">
-                      <img
-                        src="../images/hotellist/hotellist-01_300x300.jpg"
-                        alt=""
-                      />
+                <li key={i} className="MKDisplayLi col-12 col-lg-4">
+                  <div className="MKcard">
+                    <div className="MKcard-context">
+                      <div className="MKavatar">
+                        <img
+                          src="../images/hotellist/hotellist-01_300x300.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div className="">
+                        <p id="MKcard-title">{v.name}</p>
+                        <p id="MKcard-text">
+                          電話：{v.cell}
+                          <br />
+                          地址：{v.address}
+                        </p>
+                      </div>
                     </div>
-                    <div className="">
-                      <p id="MKcard-title">{v.name}</p>
-                      <p id="MKcard-text">
-                        電話：{v.cell}
-                        <br />
-                        地址：{v.address}
-                      </p>
+                    <div className="MKbutton" type="submit">
+                      <div>
+                        <button id="MKcard-btn">了解更多</button>
+                      </div>
                     </div>
                   </div>
-                  <div className="MKbutton" type="submit">
-                    <div>
-                      <button id="MKcard-btn">了解更多</button>
-                    </div>
-                  </div>
-                </div>
+                </li>
               )
             })}
           </div>
