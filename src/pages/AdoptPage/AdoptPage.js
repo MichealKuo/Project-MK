@@ -5,7 +5,7 @@ import Axios from 'axios'
 // img src
 import { withRouter } from 'react-router-dom'
 
-import AdoptPage1 from './adoptpage-01-01_300x300.jpeg'
+import AdoptPage1 from './adoptpage-01-02_300x300.jpeg'
 import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 

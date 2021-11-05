@@ -7,18 +7,19 @@ import { withRouter, Link } from 'react-router-dom'
 //Card
 import AdoptCards from './AdoptCards'
 //pagination
-import PPagination from './PaginationC'
+import PaginationC from './PaginationC'
 //data axios
 import Axios from 'axios'
+import { continueStatement } from '@babel/types'
 function AdoptList() {
-  // data axios
-  // const [petList, setPetList] = useState([])
-  // useEffect(() => {
-  //   Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
-  //     setPetList(response.data)
-  //   })
-  // }, [])
-  //paginate
+  //data axios
+  const [petList, setPetList] = useState([])
+  useEffect(() => {
+    Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
+      setPetList(response.data)
+    })
+  }, [])
+  //paginate-firstone
   // const [petList, setPetList] = useState([])
   // const [loading, setLoading] = useState(false)
   // const [currentPage, setCurrentPage] = useState(1)
@@ -137,51 +138,16 @@ function AdoptList() {
         {/* cards */}
         <Row>
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
-          {/* <div className="MKALrow-list">
-            <div className="MKALlist">
-              {petList.map((v, i) => {
-                return (
-                  <p key={i} className="MKDisplayLi col-12 col-lg-4">
-                    <div className=" MKALcard ">
-                      <div className="MKALcard-context">
-                        <div className="MKALavatar">
-                          <img src={v.avatar} alt="" />
-                        </div>
-                        <div className="">
-                          <p id="MKALcard-title">{v.name}</p>
-                          <p id="MKALcard-text"> {v.info}</p>
-                        </div>
-                      </div>
-                      <div className="MKALbutton" type="submit">
-                        <div>
-                          <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                            <button id="MKALcard-btn">了解更多</button>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </p>
-                )
-              })}
-            </div>
-          </div> */}
+          <AdoptCards />
         </Row>
         {/* pagination */}
         <Row>
-          {/* <div className="MKrow-pagination">
-            <Pagination>
-              <Pagination.Prev />
-              <Pagination.Item>{1}</Pagination.Item>
-              <Pagination.Item>{2}</Pagination.Item>
-              <Pagination.Next />
-            </Pagination>
-          </div> */}
-          {/* <PPagination
+          {/* <PaginationC
             postsPerPage={postsPerPage}
             totalPosts={petList.length}
             paginate={paginate}
-          /> */}
-          <PPagination />
+          />
+          <PaginationC /> */}
         </Row>
       </Container>
     </>

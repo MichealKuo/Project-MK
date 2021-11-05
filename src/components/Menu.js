@@ -9,7 +9,7 @@ export default function menu() {
         <Row>
           <ul className="menu">
             <li>
-              <Link to="/adoptlist">AdoptList</Link>
+              <Link to="/adoptlist/">AdoptList</Link>
             </li>
             <li>
               <Link to="/adoptlist/adoptpage">AdoptPage</Link>

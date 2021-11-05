@@ -23,10 +23,13 @@ function App() {
             <Route path="/adoptlist/adoptpage/:id?">
               <AdoptPage />
             </Route>
+            <Route path="/adoptlist/">
+              <AdoptList />
+            </Route>
             <Route path="/hotellist/hotelpage">
               <HotelPage />
             </Route>
-            <Route path="/adoptlist">
+            <Route path="/adoptlist/page/:number?">
               <AdoptList />
             </Route>
             <Route path="/hotellist">

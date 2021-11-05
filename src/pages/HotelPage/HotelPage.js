@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './HotelPage.scss'
-import HotelPagePic from './hotelpage-01-01_300x300.jpeg'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -36,17 +35,17 @@ function HotelPage() {
           <div className="MKrow MKHotelRowAvatar">
             <div className="MKHotelAvatar col-12 col-md-12">
               <div className="MKbigHotelAvatar">
-                <img src={HotelPagePic} alt="" />
+                <img src="" alt="" />
               </div>
               <div className="MKsmallHotelAvatar">
                 <div className="MKsmallHotelAvatar">
-                  <img src={HotelPagePic} alt="" />
+                  <img src="" alt="" />
                 </div>
                 <div className="MKsmallHotelAvatar">
-                  <img src={HotelPagePic} alt="" />
+                  <img src="" alt="" />
                 </div>
                 <div className="MKsmallHotelAvatar">
-                  <img src={HotelPagePic} alt="" />
+                  <img src="" alt="" />
                 </div>
               </div>
             </div>

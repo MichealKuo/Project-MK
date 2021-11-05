@@ -189,9 +189,8 @@
 }
 /* pagination */
 
-.MKpagination {
-  display: flex;
-  justify-content: center;
+.pagination,.page-link:active{
+  color: #f5df4d;
 }
 .MKpage-link {
   color: #646464;
