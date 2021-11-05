@@ -1,20 +1,46 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Pagination } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
+//Card
+import AdoptCards from './AdoptCards'
+//pagination
+import PPagination from './PaginationC'
 //data axios
 import Axios from 'axios'
 function AdoptList() {
   // data axios
-  const [petList, setPetList] = useState([])
-  useEffect(() => {
-    Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
-      setPetList(response.data)
-    })
-  }, [])
-
+  // const [petList, setPetList] = useState([])
+  // useEffect(() => {
+  //   Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
+  //     setPetList(response.data)
+  //   })
+  // }, [])
+  //paginate
+  // const [petList, setPetList] = useState([])
+  // const [loading, setLoading] = useState(false)
+  // const [currentPage, setCurrentPage] = useState(1)
+  // const [postsPerPage] = useState(9)
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     setLoading(true)
+  //     const res = await Axios.get('http://localhost:3002/api/getpetlist')
+  //     setPetList(res.data)
+  //     setLoading(false)
+  //   }
+  //   fetchPosts()
+  // }, [])
+  // const indexOfLastPost = currentPage * postsPerPage
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage
+  // const currentPosts = petList.slice(indexOfFirstPost, indexOfLastPost)
+  // //change page
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  //filter
+  const [selectType, setSelectType] = useState('')
+  const [selectLocation, setSelectLocation] = useState('')
+  const [selectGender, setSelectGender] = useState('')
   return (
     <>
       <Container fluid>
@@ -58,27 +84,45 @@ function AdoptList() {
               <div className="MKfilter">
                 <div className="MKselector">
                   <p>種類</p>
-                  <select name="" id="MKad-filter">
+                  <select
+                    value={selectType}
+                    id="MKad-filter"
+                    onChange={(e) => {
+                      setSelectType(e.target.value)
+                    }}
+                  >
                     <option value="">---請選擇---</option>
-                    <option value="">貓貓</option>
-                    <option value="">狗狗</option>
+                    <option value="貓咪">貓咪</option>
+                    <option value="狗狗">狗狗</option>
                   </select>
                 </div>
                 <div className="MKselector ">
                   <p>地區</p>
-                  <select name="" id="MKad-filter">
+                  <select
+                    value={selectLocation}
+                    id="MKad-filter"
+                    onChange={(e) => {
+                      setSelectLocation(e.target.value)
+                    }}
+                  >
                     <option value="">---請選擇---</option>
-                    <option value="">台北市</option>
-                    <option value="">新北市</option>
-                    <option value="">台中市</option>
+                    <option value="台北市">台北市</option>
+                    <option value="新北市">新北市</option>
+                    <option value="台中市">台中市</option>
                   </select>
                 </div>
                 <div className="MKselector">
                   <p>性別</p>
-                  <select name="" id="MKad-filter">
+                  <select
+                    value={selectGender}
+                    id="MKad-filter"
+                    onChange={(e) => {
+                      setSelectGender(e.target.value)
+                    }}
+                  >
                     <option value="">---請選擇---</option>
-                    <option value="">男孩</option>
-                    <option value="">女孩</option>
+                    <option value="男孩">男孩</option>
+                    <option value="女孩">女孩</option>
                   </select>
                 </div>
                 <div className="MKselector " id="MKad-filter">
@@ -92,7 +136,8 @@ function AdoptList() {
         </Row>
         {/* cards */}
         <Row>
-          <div className="MKALrow-list">
+          {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
+          {/* <div className="MKALrow-list">
             <div className="MKALlist">
               {petList.map((v, i) => {
                 return (
@@ -109,7 +154,9 @@ function AdoptList() {
                       </div>
                       <div className="MKALbutton" type="submit">
                         <div>
-                          <button id="MKALcard-btn">了解更多</button>
+                          <Link to={'/adoptlist/adoptpage/' + v.sid}>
+                            <button id="MKALcard-btn">了解更多</button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -117,18 +164,24 @@ function AdoptList() {
                 )
               })}
             </div>
-          </div>
+          </div> */}
         </Row>
         {/* pagination */}
         <Row>
-          <div className="MKrow-pagination">
+          {/* <div className="MKrow-pagination">
             <Pagination>
               <Pagination.Prev />
               <Pagination.Item>{1}</Pagination.Item>
               <Pagination.Item>{2}</Pagination.Item>
               <Pagination.Next />
             </Pagination>
-          </div>
+          </div> */}
+          {/* <PPagination
+            postsPerPage={postsPerPage}
+            totalPosts={petList.length}
+            paginate={paginate}
+          /> */}
+          <PPagination />
         </Row>
       </Container>
     </>

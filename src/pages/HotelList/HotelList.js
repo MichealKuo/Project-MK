@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Pagination } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import './HotelList.scss'
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -112,10 +112,7 @@ function HotelList() {
                   <div className="MKcard">
                     <div className="MKcard-context">
                       <div className="MKavatar">
-                        <img
-                          src="../images/hotellist/hotellist-01_300x300.jpg"
-                          alt=""
-                        />
+                        <img src={v.avatar} alt="" />
                       </div>
                       <div className="">
                         <p id="MKcard-title">{v.name}</p>

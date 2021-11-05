@@ -3112,6 +3112,11 @@ binary-extensions@^2.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
+bind@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/bind/-/bind-0.1.7.tgz#034ee3380c009666b94b774930c23678144308df"
+  integrity sha1-A07jOAwAlma5S3dJMMI2eBRDCN8=
+
 bindings@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz"
@@ -10040,6 +10045,11 @@ react-router-dom@^5.3.0:
     react-router "5.2.1"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router-scroll-top@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-router-scroll-top/-/react-router-scroll-top-0.2.1.tgz#7fc28b9636d64b2d42a24b5b64eb4bd4219a672b"
+  integrity sha512-rseL7IqA9wt1R/QIGbTFsO5O1bIXmd0f+W208rKsAYjedSrNCsu3Q8yLJZtBmdESakfAZJRGw5A6FJwRkbvQ+A==
 
 react-router@5.2.1:
   version "5.2.1"

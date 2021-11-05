@@ -28,20 +28,27 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 //get petlist
 app.get('/api/getpetlist', (req, res) => {
-  const sqlInsert = 'SELECT * FROM petlist '
-  db.query(sqlInsert, (err, result) => {
+  const sql = 'SELECT * FROM petlist '
+  db.query(sql, (err, result) => {
     res.send(result)
     console.log(err)
   })
 })
 //get hotel list
 app.get('/api/gethotellist', (req, res) => {
-  const sqlInsert = 'SELECT * FROM hotellist '
-  db.query(sqlInsert, (err, result) => {
+  const sql = 'SELECT * FROM hotellist '
+  db.query(sql, (err, result) => {
     res.send(result)
     console.log(err)
   })
 })
+// app.get('/adoptlist/adoptpage/:id', async (req, res) => {
+//   const sql = 'SELECT * FROM `petlist` WHERE sid=?'
+//   db.query(sql, (err, result) => {
+//     res.send(result)
+//     console.log(err)
+//   })
+// })
 
 app.listen(3002, () => {
   console.log('running on port 3002')

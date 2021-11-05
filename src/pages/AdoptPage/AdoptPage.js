@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './AdoptPage.scss'
+import Axios from 'axios'
 // img src
 import { withRouter } from 'react-router-dom'
 
@@ -8,7 +9,45 @@ import AdoptPage1 from './adoptpage-01-01_300x300.jpeg'
 import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 
-function AdoptPage() {
+function AdoptPage(props) {
+  console.log(props)
+  const [petList, setPetList] = useState([])
+  useEffect(() => {
+    Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
+      setPetList(response.data)
+    })
+  }, [])
+
+  const [adoptPage, setAdoptPage] = useState({
+    sid: '',
+    avatar: '',
+    avatar01: '',
+    avatar02: '',
+    avatar03: '',
+    name: '',
+    type: '',
+    location: '',
+    gender: '',
+    status: '',
+    size: '',
+    cell: '',
+    info: '',
+  })
+
+  useEffect(() => {
+    if (petList.length > 0) {
+      const id = props.match.params.id
+      // 如果id存在的話
+      // ex.用id向伺服器(資料庫)要資料
+      if (id) {
+        const foundPet = petList.find((v, i) => {
+          return String(v.sid) === String(id)
+        })
+        setAdoptPage(foundPet)
+      }
+    }
+  }, [petList, props.match.params.id])
+
   return (
     <>
       <Container>
@@ -16,7 +55,8 @@ function AdoptPage() {
         <Row>
           <div className="MKheader-title">
             <p>
-              貓咪認養資訊:<span className="MKtitle-text"> 小呆・小憨</span>
+              貓咪認養資訊:
+              <span className="MKtitle-text"> {adoptPage.name}</span>
             </p>
           </div>
         </Row>
@@ -24,17 +64,17 @@ function AdoptPage() {
         <Row>
           <div className="MKrowAvatar">
             <div className="MKadoptPageAvatar ">
-              <img src={AdoptPage1} alt="" />
+              <img src={adoptPage.avatar} alt="" />
             </div>
             <div className="MKsmall-avatar">
               <div className="MKsm-avatar">
-                <img src={AdoptPage2} alt="" />
+                <img src={adoptPage.avatar01} alt="" />
               </div>
               <div className="MKsm-avatar">
-                <img src={AdoptPage2} alt="" />
+                <img src={adoptPage.avatar02} alt="" />
               </div>
               <div className="MKsm-avatar">
-                <img src={AdoptPage2} alt="" />
+                <img src={adoptPage.avatar03} alt="" />
               </div>
             </div>
           </div>
@@ -51,7 +91,7 @@ function AdoptPage() {
                   <p>姓名</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>小呆・小憨</p>
+                  <p>{adoptPage.name}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -62,7 +102,7 @@ function AdoptPage() {
                   <p>狀態</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>開放認養</p>
+                  <p>{adoptPage.status}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -73,7 +113,7 @@ function AdoptPage() {
                   <p>種類</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>貓咪</p>
+                  <p>{adoptPage.type}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -84,7 +124,7 @@ function AdoptPage() {
                   <p>體型</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>中型</p>
+                  <p>{adoptPage.size}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -95,7 +135,7 @@ function AdoptPage() {
                   <p>地區</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>台北市</p>
+                  <p>{adoptPage.location}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -106,7 +146,7 @@ function AdoptPage() {
                   <p>電話</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>0988123456</p>
+                  <p>{adoptPage.cell}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -117,7 +157,7 @@ function AdoptPage() {
                   <p>性別</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>女孩</p>
+                  <p>{adoptPage.gender}</p>
                 </li>
               </ul>
               <ul className="MKdetail-ul">
@@ -128,7 +168,7 @@ function AdoptPage() {
                   <p>個性</p>
                 </li>
                 <li className="MKdetail-text">
-                  <p>活潑好動、愛撒嬌</p>
+                  <p>{adoptPage.info}</p>
                 </li>
               </ul>
             </div>
