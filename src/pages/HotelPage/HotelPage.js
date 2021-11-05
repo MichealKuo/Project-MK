@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './HotelPage.scss'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
+import Axios from 'axios'
 
-function HotelPage() {
+function HotelPage(props) {
+  console.log(props)
+
   // const coll = document.getElementsByclassNameName('collapsible')
 
   // for (i = 0; i < coll.length; i++) {
@@ -19,6 +22,36 @@ function HotelPage() {
   //     }
   //   })
   // }
+  const [hotelList, setHotelList] = useState([])
+  useEffect(() => {
+    Axios.get('http://localhost:3002/api/gethotellist').then((response) => {
+      setHotelList(response.data)
+    })
+  }, [])
+  const [hotelPage, setHotelPage] = useState({
+    sid: '',
+    avatar: '',
+    avatar01: '',
+    avatar02: '',
+    avatar03: '',
+    name: '',
+    location: '',
+    cell: '',
+    address: '',
+  })
+  useEffect(() => {
+    if (hotelList.length > 0) {
+      const id = props.match.params.id
+      // 如果id存在的話
+      // ex.用id向伺服器(資料庫)要資料
+      if (id) {
+        const foundPet = hotelList.find((v, i) => {
+          return String(v.sid) === String(id)
+        })
+        setHotelPage(foundPet)
+      }
+    }
+  }, [hotelList, props.match.params.id])
   return (
     <>
       <Container fluid>
@@ -26,7 +59,7 @@ function HotelPage() {
         <Row>
           <div className="MKHotelHeaderTitle">
             <p>
-              旅宿明細:<span className="MKtitle-text"> 喵星球</span>
+              旅宿明細:<span className="MKtitle-text"> {hotelPage.name}</span>
             </p>
           </div>
         </Row>
@@ -35,17 +68,17 @@ function HotelPage() {
           <div className="MKrow MKHotelRowAvatar">
             <div className="MKHotelAvatar col-12 col-md-12">
               <div className="MKbigHotelAvatar">
-                <img src="" alt="" />
+                <img src={hotelPage.avatar} alt="" />
               </div>
               <div className="MKsmallHotelAvatar">
                 <div className="MKsmallHotelAvatar">
-                  <img src="" alt="" />
+                  <img src={hotelPage.avatar01} alt="" />
                 </div>
                 <div className="MKsmallHotelAvatar">
-                  <img src="" alt="" />
+                  <img src={hotelPage.avatar02} alt="" />
                 </div>
                 <div className="MKsmallHotelAvatar">
-                  <img src="" alt="" />
+                  <img src={hotelPage.avatar03} alt="" />
                 </div>
               </div>
             </div>

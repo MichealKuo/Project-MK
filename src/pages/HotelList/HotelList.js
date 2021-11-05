@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import './HotelList.scss'
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
+import HotelCards from './HotelCard'
 
 // data
 import Axios from 'axios'
@@ -105,7 +106,7 @@ function HotelList() {
         </Row>
         {/* HotelCardList */}
         <Row>
-          <div className="MKrow-list">
+          {/* <div className="MKrow-list">
             {hotelList.map((v, i) => {
               return (
                 <li key={i} className="MKDisplayLi col-12 col-lg-4">
@@ -132,10 +133,11 @@ function HotelList() {
                 </li>
               )
             })}
-          </div>
+          </div> */}
+          <HotelCards />
         </Row>
         {/* pagination */}
-        <Row>
+        {/* <Row>
           <div className="MKrow-pagination">
             <div aria-label="Page navigation example">
               <ul className="pagination">
@@ -167,7 +169,7 @@ function HotelList() {
               </ul>
             </div>
           </div>
-        </Row>
+        </Row> */}
       </Container>
     </>
   )

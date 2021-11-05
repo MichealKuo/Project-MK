@@ -105,7 +105,7 @@
 }
 .MKALlist {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   flex-wrap: wrap;
 }
 .MKDisplayLi {
@@ -189,9 +189,10 @@
 }
 /* pagination */
 
-.pagination,.page-link:active{
-  color: #f5df4d;
+.page-item {
+  cursor: pointer;
 }
+
 .MKpage-link {
   color: #646464;
 }

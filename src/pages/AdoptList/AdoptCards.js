@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
-import Dash, { initial } from 'lodash'
-import { Pagination } from 'react-bootstrap'
+import Dash from 'lodash'
+
 const pageSize = 9
 
 const AdoptCards = () => {
@@ -61,7 +61,7 @@ const AdoptCards = () => {
         </div>
       </div>
       <div>
-        <ul className="pagination d-flex justify-content-center">
+        <ul className="pagination d-flex justify-content-center ">
           {pages.map((page) => (
             <li
               className={

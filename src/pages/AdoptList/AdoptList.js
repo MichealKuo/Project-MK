@@ -7,10 +7,8 @@ import { withRouter, Link } from 'react-router-dom'
 //Card
 import AdoptCards from './AdoptCards'
 //pagination
-import PaginationC from './PaginationC'
 //data axios
 import Axios from 'axios'
-import { continueStatement } from '@babel/types'
 function AdoptList() {
   //data axios
   const [petList, setPetList] = useState([])
@@ -19,26 +17,7 @@ function AdoptList() {
       setPetList(response.data)
     })
   }, [])
-  //paginate-firstone
-  // const [petList, setPetList] = useState([])
-  // const [loading, setLoading] = useState(false)
-  // const [currentPage, setCurrentPage] = useState(1)
-  // const [postsPerPage] = useState(9)
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     setLoading(true)
-  //     const res = await Axios.get('http://localhost:3002/api/getpetlist')
-  //     setPetList(res.data)
-  //     setLoading(false)
-  //   }
-  //   fetchPosts()
-  // }, [])
-  // const indexOfLastPost = currentPage * postsPerPage
-  // const indexOfFirstPost = indexOfLastPost - postsPerPage
-  // const currentPosts = petList.slice(indexOfFirstPost, indexOfLastPost)
-  // //change page
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber)
-  //filter
+
   const [selectType, setSelectType] = useState('')
   const [selectLocation, setSelectLocation] = useState('')
   const [selectGender, setSelectGender] = useState('')

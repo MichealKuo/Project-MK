@@ -5,7 +5,6 @@ import AdoptPage from './pages/AdoptPage/AdoptPage'
 import HotelList from './pages/HotelList/HotelList'
 import HotelPage from './pages/HotelPage/HotelPage'
 import ScrollToTop from 'react-router-scroll-top'
-import Menu from './components/Menu'
 
 // 組件
 import MyNavbar from './components/MyNavbar'
@@ -17,19 +16,15 @@ function App() {
       <>
         <MyNavbar />
         <MultiLevelBreadCrumb />
-        <Menu />
         <ScrollToTop>
           <Switch>
             <Route path="/adoptlist/adoptpage/:id?">
               <AdoptPage />
             </Route>
-            <Route path="/adoptlist/">
-              <AdoptList />
-            </Route>
-            <Route path="/hotellist/hotelpage">
+            <Route path="/hotellist/hotelpage/:id?">
               <HotelPage />
             </Route>
-            <Route path="/adoptlist/page/:number?">
+            <Route path="/adoptlist/">
               <AdoptList />
             </Route>
             <Route path="/hotellist">
