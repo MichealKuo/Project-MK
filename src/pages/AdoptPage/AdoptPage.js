@@ -8,7 +8,8 @@ import { withRouter } from 'react-router-dom'
 import AdoptPage1 from './adoptpage-01-02_300x300.jpeg'
 import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
-
+//comments
+import Comments from './Comments'
 function AdoptPage(props) {
   console.log(props)
   const [petList, setPetList] = useState([])
@@ -197,7 +198,7 @@ function AdoptPage(props) {
           </div>
         </Row>
         {/* Comments */}
-        <Row>
+        {/* <Row>
           <div className="MKrowComment">
             <div className="MKcomm">
               <div className="MKcom-header">
@@ -263,7 +264,8 @@ function AdoptPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </Row> */}
+        <Comments />
       </Container>
     </>
   )

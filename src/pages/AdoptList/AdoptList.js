@@ -11,12 +11,12 @@ import AdoptCards from './AdoptCards'
 import Axios from 'axios'
 function AdoptList() {
   //data axios
-  const [petList, setPetList] = useState([])
-  useEffect(() => {
-    Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
-      setPetList(response.data)
-    })
-  }, [])
+  // const [petList, setPetList] = useState([])
+  // useEffect(() => {
+  //   Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
+  //     setPetList(response.data)
+  //   })
+  // }, [])
 
   const [selectType, setSelectType] = useState('')
   const [selectLocation, setSelectLocation] = useState('')

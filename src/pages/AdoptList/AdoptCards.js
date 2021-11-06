@@ -68,7 +68,10 @@ const AdoptCards = () => {
                 page === currentPage ? ' page-item active ' : 'page-item'
               }
             >
-              <p className="page-link" onClick={() => pagination(page)}>
+              <p
+                className="page-link MKpage-link"
+                onClick={() => pagination(page)}
+              >
                 {page}
               </p>
             </li>
