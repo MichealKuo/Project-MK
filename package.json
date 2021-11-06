@@ -10,6 +10,7 @@
         "axios": "^0.24.0",
         "bind": "^0.1.7",
         "bootstrap": "4.6.0",
+        "dayjs": "^1.10.7",
         "eslint-config-react-app": "^6.0.0",
         "eslint-plugin-import": "^2.25.2",
         "eslint-plugin-jsx-a11y": "^6.4.1",

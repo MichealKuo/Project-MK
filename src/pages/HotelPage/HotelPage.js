@@ -310,9 +310,9 @@ function HotelPage(props) {
                 </div>
               </div>
               <div className="MKcommBtnH">
-                <div className="MKcomButton" type="submit">
+                <div className="" type="submit">
                   <div>
-                    <button id="MKcard-btn">我要評價</button>
+                    <button className="ACYellowOutlineBtn">我要評價</button>
                   </div>
                 </div>
               </div>

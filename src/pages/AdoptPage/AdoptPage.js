@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './AdoptPage.scss'
+
 import Axios from 'axios'
+
 // img src
 import { withRouter } from 'react-router-dom'
 
-import AdoptPage1 from './adoptpage-01-02_300x300.jpeg'
-import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
-import ComAvatar2 from './adoptlist-02_300x300.jpg'
+// import AdoptPage1 from './adoptpage-01-02_300x300.jpeg'
+// import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
+// import ComAvatar2 from './adoptlist-02_300x300.jpg'
 //comments
 import Comments from './Comments'
 function AdoptPage(props) {
@@ -174,7 +176,7 @@ function AdoptPage(props) {
               </ul>
             </div>
             <div className="MKdetail-btn">
-              <div className="MKbutton-G" type="submit">
+              <div className="ACGrayOutlineBtn" type="submit">
                 <div>
                   <button id="MKcard-btn">
                     <span className="MKbtn-mail">

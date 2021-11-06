@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-
+import './ACButtons.scss'
 const pageSize = 9
 
 const AdoptCards = () => {
@@ -47,10 +47,10 @@ const AdoptCards = () => {
                       <p id="MKALcard-text"> {v.info}</p>
                     </div>
                   </div>
-                  <div className="MKALbutton" type="submit">
+                  <div className="mt-4 mb-5" type="submit">
                     <div>
                       <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                        <button id="MKALcard-btn">了解更多</button>
+                        <button className="ACYellowOutlineBtn">了解更多</button>
                       </Link>
                     </div>
                   </div>

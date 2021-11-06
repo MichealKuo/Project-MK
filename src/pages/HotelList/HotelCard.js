@@ -49,10 +49,10 @@ function HotelCard() {
                     </p>
                   </div>
                 </div>
-                <div className="MKbutton" type="submit">
+                <div className="mt-4 mb-5" type="submit">
                   <div>
                     <Link to={'/hotellist/hotelpage/' + v.sid}>
-                      <button id="MKcard-btn">了解更多</button>
+                      <button className="ACYellowOutlineBtn">了解更多</button>
                     </Link>
                   </div>
                 </div>

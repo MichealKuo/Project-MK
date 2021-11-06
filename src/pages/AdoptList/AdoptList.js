@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 //Card
 import AdoptCards from './AdoptCards'
 //pagination
 //data axios
-import Axios from 'axios'
+// import Axios from 'axios'
 function AdoptList() {
   //data axios
   // const [petList, setPetList] = useState([])
