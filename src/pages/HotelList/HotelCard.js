@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
+import './MKButtons.scss'
 
 const pageSize = 3
 
@@ -34,7 +35,7 @@ function HotelCard() {
       <div className="MKrow-list">
         {paginatedPosts.map((v, i) => {
           return (
-            <li key={i} className="MKDisplayLi col-12 col-lg-4">
+            <li key={i} className="MKDisplayLi col-10 col-md-4">
               <div className="MKcard">
                 <div className="MKcard-context">
                   <div className="MKavatar">
@@ -52,7 +53,7 @@ function HotelCard() {
                 <div className="mt-4 mb-5" type="submit">
                   <div>
                     <Link to={'/hotellist/hotelpage/' + v.sid}>
-                      <button className="ACYellowOutlineBtn">了解更多</button>
+                      <button className="MKYellowOutlineBtn">了解更多</button>
                     </Link>
                   </div>
                 </div>

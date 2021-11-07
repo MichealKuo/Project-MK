@@ -2,7 +2,7 @@ import React from 'react'
 // 高階元件樣式(HOC)，增強元件用的
 import { withRouter, Link } from 'react-router-dom'
 // 中文路徑對照陣列，移出到config/index.js中設定
-import { pathnameList, pathnameTextList } from '../config/index'
+import { pathnameList, pathnameTextList } from '../config'
 
 function MultiLevelBreadCrumb(props) {
   const { location } = props
@@ -32,10 +32,10 @@ function MultiLevelBreadCrumb(props) {
   const formatText = (index) => {
     if (index === -1) return ''
 
-    // '/產品/嬰兒/初生兒' -> ['','產品','嬰兒', '初生兒']
+    // '/毛孩雜貨/貓貓館/貓的玩具' -> ['','毛孩雜貨','貓貓館', '貓的玩具']
     const textArray = pathnameTextList[index].split('/')
 
-    // '/product/baby/birth' -> ['','product','baby', 'birth']
+    // '/productlist/cat/toys' -> ['','product','cat', 'toys']
     const pathArray = pathnameList[index].split('/')
 
     console.log(textArray, pathArray)
@@ -54,6 +54,7 @@ function MultiLevelBreadCrumb(props) {
       return (
         <li key={i} className="breadcrumb-item">
           <Link to={pathArray.slice(0, i + 1).join('/')}>{v}</Link>
+          {/* <p>{v}</p> */}
         </li>
       )
     })
@@ -61,6 +62,7 @@ function MultiLevelBreadCrumb(props) {
     return listArray
   }
 
+  // 首頁不出現breadcrumb
   if (location.pathname === '/home') return <></>
 
   return (
@@ -68,7 +70,8 @@ function MultiLevelBreadCrumb(props) {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb bg-white container-fluid px-md-5 py-md-1 mb-md-0">
           <li className="breadcrumb-item">
-            <Link to="/">首頁</Link>
+            <Link to="/home">首頁</Link>
+            {/* <p>首頁</p> */}
           </li>
           {formatText(findPathnameIndex(location.pathname))}
         </ol>

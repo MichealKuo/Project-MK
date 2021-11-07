@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-import './ACButtons.scss'
+import './MKButtons.scss'
 const pageSize = 9
 
 const AdoptCards = () => {
@@ -10,7 +10,9 @@ const AdoptCards = () => {
   //   if (loading) {
   //     return <h2>Loading....</h2>
   //   }
+  //petlist data
   const [petList, setPetList] = useState([])
+  //paginatePart
   const [paginatedPosts, setPaginatedPosts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   useEffect(() => {
@@ -19,7 +21,7 @@ const AdoptCards = () => {
       setPaginatedPosts(Dash(response.data).slice(0).take(pageSize).value())
     })
   }, [])
-  console.log(paginatedPosts)
+  // console.log(paginatedPosts)
 
   const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
   // if ([pageCount === 1]) return null
@@ -32,11 +34,12 @@ const AdoptCards = () => {
   }
   return (
     <>
+      {/* 引入資料 */}
       <div className="MKALrow-list">
         <div className="MKALlist">
           {paginatedPosts.map((v, i) => {
             return (
-              <p key={i} className="MKDisplayLi col-12 col-lg-4">
+              <p key={i} className="MKDisplayLi col-10 col-md-4">
                 <div className=" MKALcard ">
                   <div className="MKALcard-context">
                     <div className="MKALavatar">
@@ -49,8 +52,9 @@ const AdoptCards = () => {
                   </div>
                   <div className="mt-4 mb-5" type="submit">
                     <div>
+                      {/* 點擊按鈕跳對照id分頁 */}
                       <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                        <button className="ACYellowOutlineBtn">了解更多</button>
+                        <button className="MKYellowOutlineBtn">了解更多</button>
                       </Link>
                     </div>
                   </div>
@@ -61,6 +65,7 @@ const AdoptCards = () => {
         </div>
       </div>
       <div>
+        {/* 分頁按鈕 */}
         <ul className="pagination d-flex justify-content-center ">
           {pages.map((page) => (
             <li

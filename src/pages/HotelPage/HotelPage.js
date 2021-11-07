@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import './HotelPage.scss'
+import './MKButtons.scss'
+
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -56,15 +58,15 @@ function HotelPage(props) {
     <>
       <Container fluid>
         {/* title */}
-        <Row>
+        <>
           <div className="MKHotelHeaderTitle">
             <p>
               旅宿明細:<span className="MKtitle-text"> {hotelPage.name}</span>
             </p>
           </div>
-        </Row>
+        </>
         {/* avatar */}
-        <Row>
+        <>
           <div className="MKrow MKHotelRowAvatar">
             <div className="MKHotelAvatar col-12 col-md-12">
               <div className="MKbigHotelAvatar">
@@ -83,7 +85,7 @@ function HotelPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* booking form */}
         {/* <Row>
           <div className="MKbooking">
@@ -138,7 +140,7 @@ function HotelPage(props) {
           </div>
         </Row> */}
         {/* roomService */}
-        <Row>
+        <>
           <div className="row MKrowService">
             <div className="MKroomService col-12 col-sm-12 col-md-6 col-xl-6 ">
               <button type="button" className="MKcollapsible ">
@@ -235,9 +237,9 @@ function HotelPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* hotel comments */}
-        <Row>
+        <>
           <div className="MKHotelRowComment">
             <div className="MKHotelComm">
               <div className="MKcom-header">
@@ -312,13 +314,13 @@ function HotelPage(props) {
               <div className="MKcommBtnH">
                 <div className="" type="submit">
                   <div>
-                    <button className="ACYellowOutlineBtn">我要評價</button>
+                    <button className="MKYellowOutlineBtn">我要評價</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
+        </>
       </Container>
     </>
   )

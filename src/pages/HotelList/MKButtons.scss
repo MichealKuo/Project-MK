@@ -1,4 +1,4 @@
-.ACGrayOutlineBtn {
+.MKGrayOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #939597;
@@ -6,6 +6,8 @@
   color: #646464;
   margin: 5px 0px 25px 0px;
   text-align: center;
+  height: 30px;
+
 
   &:hover {
     background-color: #939597;
@@ -28,11 +30,13 @@
   }
 }
 
-.ACGrayBtn:hover {
+.MKGrayBtn:hover {
   text-decoration: none;
 }
 
-.ACYellowOutlineBtn {
+.MKYellowOutlineBtn {
+  height: 30px;
+
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -66,23 +70,8 @@
   }
 }
 
-.ACYellowBtn:hover {
+.MKYellowBtn:hover {
     text-decoration: none;
   }
 
 
-.m-ACYellowOutlineBtn {
-  width: 180px;
-  border-radius: 20px;
-  border: 2px solid #f5df4d;
-  background-color: #fff;
-  color: #646464;
-  text-align: center;
-}
-
-.m-ACYellowOutlineBtn:active {
-  background-color: #f5df4d;
-  border-color: #fff;
-  color: white;
-  text-decoration: none;
-}

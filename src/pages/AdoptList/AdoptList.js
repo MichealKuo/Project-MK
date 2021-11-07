@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
+import { BsSearch } from 'react-icons/bs'
 
 //Card
 import AdoptCards from './AdoptCards'
+import './MKButtons.scss'
+
 //pagination
 //data axios
 // import Axios from 'axios'
@@ -25,7 +28,7 @@ function AdoptList() {
     <>
       <Container fluid>
         {/* banner */}
-        <Row>
+        <>
           <div className="MKbanner">
             <div className="MKbanner-left">
               <img src={AdoptListBanner} alt="" />
@@ -41,9 +44,9 @@ function AdoptList() {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* RWD-Banner */}
-        <Row>
+        <>
           <div className="MKRWD-banner">
             <div className="MKrwd-banner-text">
               <p>毛孩找家</p>
@@ -56,9 +59,9 @@ function AdoptList() {
               </h5>
             </div>
           </div>
-        </Row>
+        </>
         {/* filter */}
-        <Row>
+        <>
           <div className="MKrowFilter">
             <div className="MKadopt-filter">
               <div className="MKfilter">
@@ -107,27 +110,27 @@ function AdoptList() {
                 </div>
                 <div className="MKselector " id="MKad-filter">
                   <button id="MKsearch-btn" type="submit">
-                    <i className="fas fa-search"></i>
+                    <BsSearch />
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* cards */}
-        <Row>
+        <>
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
           <AdoptCards />
-        </Row>
+        </>
         {/* pagination */}
-        <Row>
+        <>
           {/* <PaginationC
             postsPerPage={postsPerPage}
             totalPosts={petList.length}
             paginate={paginate}
           />
           <PaginationC /> */}
-        </Row>
+        </>
       </Container>
     </>
   )

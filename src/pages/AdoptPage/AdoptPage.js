@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import './AdoptPage.scss'
+import './MKButtons.scss'
 
 import Axios from 'axios'
 
@@ -176,10 +177,10 @@ function AdoptPage(props) {
               </ul>
             </div>
             <div className="MKdetail-btn">
-              <div className="ACGrayOutlineBtn" type="submit">
+              <div className="" type="submit">
                 <div>
-                  <button id="MKcard-btn">
-                    <span className="MKbtn-mail">
+                  <button className="MKGrayOutlineBtn">
+                    <span className="">
                       <i className="far fa-envelope"></i>
                     </span>
                     私信飼主

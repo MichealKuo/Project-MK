@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import './HotelList.scss'
+import './MKButtons.scss'
+
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
-
-// data
+import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
 
 function HotelList() {
@@ -19,7 +20,7 @@ function HotelList() {
     <>
       <Container fluid>
         {/* Banner */}
-        <Row>
+        <>
           <div className="MKbanner">
             <div className="MKbanner-left">
               <img src={HotelListBanner} alt="" />
@@ -35,9 +36,9 @@ function HotelList() {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* RWD Banner */}
-        <Row>
+        <>
           <div className="MKRWD-banner">
             <div className="MKrwd-banner-text">
               <p>毛孩假期</p>
@@ -50,9 +51,9 @@ function HotelList() {
               </h5>
             </div>
           </div>
-        </Row>
+        </>
         {/* filter */}
-        <Row>
+        <>
           <div className="MKrowFilter">
             <div className="MKadopt-filter">
               <div className="MKfilter">
@@ -88,24 +89,25 @@ function HotelList() {
                 </div>
                 <div className="MKselector " id="MKad-filter">
                   <button id="MKsearch-btn" type="submit">
-                    <i className="fas fa-search"></i>
+                    {/* <i className="fas fa-search"></i> */}
+                    <BsSearch />
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* map */}
-        <Row>
+        <>
           <div className="MKrow-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.8517337052526!2d121.51392975777993!3d25.047523761341026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9727e339109%3A0xc34a31ce3a4abecb!2z6Ie65YyX6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1634912525150!5m2!1szh-TW!2stw"
               loading="lazy"
             ></iframe>
           </div>
-        </Row>
+        </>
         {/* HotelCardList */}
-        <Row>
+        <>
           {/* <div className="MKrow-list">
             {hotelList.map((v, i) => {
               return (
@@ -135,7 +137,7 @@ function HotelList() {
             })}
           </div> */}
           <HotelCards />
-        </Row>
+        </>
         {/* pagination */}
         {/* <Row>
           <div className="MKrow-pagination">

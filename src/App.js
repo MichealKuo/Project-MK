@@ -1,14 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+//pages
 import AdoptList from './pages/AdoptList/AdoptList'
 import AdoptPage from './pages/AdoptPage/AdoptPage'
 import HotelList from './pages/HotelList/HotelList'
 import HotelPage from './pages/HotelPage/HotelPage'
-import ScrollToTop from 'react-router-scroll-top'
 
 // 組件
+import ScrollToTop from 'react-router-scroll-top'
 import MyNavbar from './components/MyNavbar'
-import MyFooter from './components/MyFooter'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 function App() {
   return (
@@ -37,7 +37,6 @@ function App() {
         </ScrollToTop>
 
         {/* end 匹配路由表 */}
-        <MyFooter />
       </>
     </Router>
   )
