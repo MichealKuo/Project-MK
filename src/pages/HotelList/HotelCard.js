@@ -49,7 +49,7 @@ function HotelCard() {
                     </p>
                   </div>
                 </div>
-                <div className="MKbutton mt-4 mb-5" type="submit">
+                <div className="MKbutton mt-5 mb-5" type="submit">
                   <div>
                     <Link to={'/hotellist/hotelpage/' + v.sid}>
                       <button className="" id="MKcard-btn">

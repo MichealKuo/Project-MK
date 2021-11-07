@@ -246,32 +246,40 @@
 #MKcard-btn {
   background-color: transparent;
   width: 90%;
-  height: 30px;
+  height: 35px;
   color: #646464;
   border: none;
   font-size: 1rem;
   position: relative;
+  text-align: center;
+
 }
 #MKcard-btn:hover {
   color: #fff;
 }
 .MKcommBtnH {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 3rem;
-  display: flex;
-  justify-content: end;
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #f5df4d;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+
 }
 .MKcomButton:hover {
   background-color: #f5df4d;
 }
 .MKcomButton {
-  width: 200px;
   height: 35px;
-  border: 1px solid #f5df4d;
+  width: 200px;
+  border: 2px solid #f5df4d;
   border-radius: 90px;
   text-align: center;
+
 }
+
+
 
 /* RWD */
 @media screen and (max-width: 992px) {

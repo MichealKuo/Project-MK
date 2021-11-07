@@ -182,13 +182,16 @@
 }
 /* button & hover */
 .MKbutton {
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 200px;
   height: 35px;
-  border: 1px solid #f5df4d;
+  border: 2px solid #f5df4d;
   border-radius: 90px;
   text-align: center;
+  background-color: #fff;
 }
 .MKbutton:hover {
   background-color: #f5df4d;

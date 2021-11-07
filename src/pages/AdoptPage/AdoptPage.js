@@ -186,16 +186,6 @@ function AdoptPage(props) {
                   </button>
                 </div>
               </div>
-              {/* <div className="MKbuttonAdopt" type="submit">
-                <div>
-                  <button id="MKcard-btn">
-                    <span className="MKbtn-heart">
-                      <i className="fas fa-heart"></i>
-                    </span>
-                    我要認養
-                  </button>
-                </div>
-              </div> */}
             </div>
           </div>
         </Row>

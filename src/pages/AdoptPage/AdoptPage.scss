@@ -145,7 +145,7 @@
 .MKcomButton {
   width: 200px;
   height: 35px;
-  border: 1px solid #f5df4d;
+  border: 2px solid #f5df4d;
   border-radius: 90px;
   text-align: center;
 }
@@ -156,9 +156,10 @@
   margin-bottom: 20px;
   width: 200px;
   height: 35px;
-  border: 1px solid #939597;
+  border: 2px solid #939597;
   border-radius: 90px;
   text-align: center;
+  background-color: #fff;
 }
 .button-G:hover {
   background-color: #939597;
