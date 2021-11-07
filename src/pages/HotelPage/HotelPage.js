@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import './HotelPage.scss'
-import './MKButtons.scss'
 
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
@@ -312,9 +311,11 @@ function HotelPage(props) {
                 </div>
               </div>
               <div className="MKcommBtnH">
-                <div className="" type="submit">
+                <div className="MKcomButton" type="submit">
                   <div>
-                    <button className="MKYellowOutlineBtn">我要評價</button>
+                    <button className="" id="MKcard-btn">
+                      我要評價
+                    </button>
                   </div>
                 </div>
               </div>

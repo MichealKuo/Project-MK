@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import './HotelList.scss'
-import './MKButtons.scss'
 
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'

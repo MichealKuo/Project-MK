@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-import './MKButtons.scss'
 const pageSize = 9
 
 const AdoptCards = () => {
@@ -50,11 +49,13 @@ const AdoptCards = () => {
                       <p id="MKALcard-text"> {v.info}</p>
                     </div>
                   </div>
-                  <div className="mt-4 mb-5" type="submit">
+                  <div className="MKALbutton mt-5 mb-5" type="submit">
                     <div>
                       {/* 點擊按鈕跳對照id分頁 */}
                       <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                        <button className="MKYellowOutlineBtn">了解更多</button>
+                        <button className="" id="MKALcard-btn">
+                          了解更多
+                        </button>
                       </Link>
                     </div>
                   </div>

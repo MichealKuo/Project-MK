@@ -7,7 +7,6 @@ import { BsSearch } from 'react-icons/bs'
 
 //Card
 import AdoptCards from './AdoptCards'
-import './MKButtons.scss'
 
 //pagination
 //data axios

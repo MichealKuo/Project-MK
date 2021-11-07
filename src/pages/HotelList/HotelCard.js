@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-import './MKButtons.scss'
 
 const pageSize = 3
 
@@ -50,10 +49,12 @@ function HotelCard() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 mb-5" type="submit">
+                <div className="MKbutton mt-4 mb-5" type="submit">
                   <div>
                     <Link to={'/hotellist/hotelpage/' + v.sid}>
-                      <button className="MKYellowOutlineBtn">了解更多</button>
+                      <button className="" id="MKcard-btn">
+                        了解更多
+                      </button>
                     </Link>
                   </div>
                 </div>
