@@ -5,6 +5,8 @@ import './HotelList.scss'
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
+import Carousel from './Carousel'
+
 import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
 
@@ -17,7 +19,7 @@ function HotelList() {
   }, [])
   return (
     <>
-      <Container fluid>
+      <>
         {/* Banner */}
         <>
           <div className="MKbanner">
@@ -106,72 +108,10 @@ function HotelList() {
           </div>
         </>
         {/* HotelCardList */}
-        <>
-          {/* <div className="MKrow-list">
-            {hotelList.map((v, i) => {
-              return (
-                <li key={i} className="MKDisplayLi col-12 col-lg-4">
-                  <div className="MKcard">
-                    <div className="MKcard-context">
-                      <div className="MKavatar">
-                        <img src={v.avatar} alt="" />
-                      </div>
-                      <div className="">
-                        <p id="MKcard-title">{v.name}</p>
-                        <p id="MKcard-text">
-                          電話：{v.cell}
-                          <br />
-                          地址：{v.address}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="MKbutton" type="submit">
-                      <div>
-                        <button id="MKcard-btn">了解更多</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              )
-            })}
-          </div> */}
-          <HotelCards />
-        </>
+        <HotelCards />
         {/* pagination */}
-        {/* <Row>
-          <div className="MKrow-pagination">
-            <div aria-label="Page navigation example">
-              <ul className="pagination">
-                <li className="MKpage-link">
-                  <a className="page-link" href="/" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    1
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    2
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    3
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="/" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Row> */}
-      </Container>
+        <Carousel />
+      </>
     </>
   )
 }

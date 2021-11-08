@@ -55,7 +55,7 @@ function AdoptPage(props) {
 
   return (
     <>
-      <Container>
+      <>
         {/* header */}
         <>
           <div className="MKheader-title">
@@ -260,7 +260,7 @@ function AdoptPage(props) {
           </div>
         </Row> */}
         <Comments />
-      </Container>
+      </>
     </>
   )
 }

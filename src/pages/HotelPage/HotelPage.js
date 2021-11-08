@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import './HotelPage.scss'
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from 'react-icons/ai'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -55,7 +55,7 @@ function HotelPage(props) {
   }, [hotelList, props.match.params.id])
   return (
     <>
-      <Container fluid>
+      <>
         {/* title */}
         <>
           <div className="MKHotelHeaderTitle">
@@ -310,8 +310,8 @@ function HotelPage(props) {
                   </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-center">
-                <div className="MKHPutton mt-5 mb-5" type="submit">
+              <div className="MKHProwBtn">
+                <div className="MKHPutton" type="submit">
                   <div>
                     {/* 點擊按鈕跳對照id分頁 */}
                     <button className="MKHPcard-btn">我要回覆</button>
@@ -321,7 +321,7 @@ function HotelPage(props) {
             </div>
           </div>
         </>
-      </Container>
+      </>
     </>
   )
 }

@@ -34,7 +34,7 @@ function HotelCard() {
       <div className="MKrow-list">
         {paginatedPosts.map((v, i) => {
           return (
-            <li key={i} className="MKDisplayLi col-10 col-md-4">
+            <li key={i} className="MKDisplayLi">
               <div className="MKcard">
                 <div className="MKcard-context">
                   <div className="MKavatar">
@@ -49,7 +49,7 @@ function HotelCard() {
                     </p>
                   </div>
                 </div>
-                <div className=" mt-4 mb-5" type="submit">
+                <div className="" type="submit">
                   <div>
                     <Link to={'/hotellist/hotelpage/' + v.sid}>
                       <button className="MKbutton" id="">
@@ -64,7 +64,7 @@ function HotelCard() {
         })}
       </div>
       <div>
-        <ul className="pagination d-flex justify-content-center ">
+        <ul className="pagination MKpagination">
           {pages.map((page) => (
             <li
               className={

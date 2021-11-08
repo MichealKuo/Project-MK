@@ -25,7 +25,7 @@ function AdoptList() {
   const [selectGender, setSelectGender] = useState('')
   return (
     <>
-      <Container fluid>
+      <>
         {/* banner */}
         <>
           <div className="MKbanner">
@@ -121,7 +121,7 @@ function AdoptList() {
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
           <AdoptCards />
         </>
-      </Container>
+      </>
     </>
   )
 }

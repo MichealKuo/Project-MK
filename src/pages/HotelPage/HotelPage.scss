@@ -242,7 +242,10 @@
   object-fit: fill;
 }
 /* btn */
-
+.MKHProwBtn{
+  display: flex;
+  justify-content: center;
+}
 .MKHPutton {
   margin-left: 10px;
   margin-right: 10px;
@@ -254,6 +257,7 @@
   border-radius: 90px;
   text-align: center;
   background-color: #fff;
+
   
 }
 .MKHPutton:hover {
