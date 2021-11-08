@@ -68,7 +68,7 @@ function AdoptList() {
                   <p>種類</p>
                   <select
                     value={selectType}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectType(e.target.value)
                     }}
@@ -82,7 +82,7 @@ function AdoptList() {
                   <p>地區</p>
                   <select
                     value={selectLocation}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectLocation(e.target.value)
                     }}
@@ -97,7 +97,7 @@ function AdoptList() {
                   <p>性別</p>
                   <select
                     value={selectGender}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectGender(e.target.value)
                     }}
@@ -107,8 +107,8 @@ function AdoptList() {
                     <option value="女孩">女孩</option>
                   </select>
                 </div>
-                <div className="MKselector " id="MKad-filter">
-                  <button id="MKsearch-btn" type="submit">
+                <div className=" ">
+                  <button className="MKsearch-btn" type="submit">
                     <BsSearch />
                   </button>
                 </div>
@@ -120,15 +120,6 @@ function AdoptList() {
         <>
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
           <AdoptCards />
-        </>
-        {/* pagination */}
-        <>
-          {/* <PaginationC
-            postsPerPage={postsPerPage}
-            totalPosts={petList.length}
-            paginate={paginate}
-          />
-          <PaginationC /> */}
         </>
       </Container>
     </>

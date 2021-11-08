@@ -243,43 +243,34 @@
 }
 /* btn */
 
-#MKcard-btn {
-  background-color: transparent;
-  width: 90%;
+.MKHPutton {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 172px;
   height: 35px;
-  color: #646464;
-  border: none;
-  font-size: 1rem;
-  position: relative;
-  text-align: center;
-
-}
-#MKcard-btn:hover {
-  color: #fff;
-}
-.MKcommBtnH {
-  width: 200px;
-  border-radius: 20px;
-  border: 2px solid #f5df4d;
-  background-color: #fff;
-  color: #646464;
-  margin: 5px 0px 25px 0px;
-  text-align: center;
-
-}
-.MKcomButton:hover {
-  background-color: #f5df4d;
-}
-.MKcomButton {
-  height: 35px;
-  width: 200px;
   border: 2px solid #f5df4d;
   border-radius: 90px;
   text-align: center;
-
+  background-color: #fff;
+  
 }
-
-
+.MKHPutton:hover {
+  background-color: #f5df4d;
+}
+.MKHPcard-btn {
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  // position: relative;
+}
+.MKHPcard-btn:hover {
+  color: #fff;
+}
 
 /* RWD */
 @media screen and (max-width: 992px) {

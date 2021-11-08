@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import './HotelPage.scss'
-
+import { AiFillStar } from "react-icons/ai";
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -67,7 +67,7 @@ function HotelPage(props) {
         {/* avatar */}
         <>
           <div className="MKrow MKHotelRowAvatar">
-            <div className="MKHotelAvatar col-12 col-md-12">
+            <div className="MKHotelAvatar">
               <div className="MKbigHotelAvatar">
                 <img src={hotelPage.avatar} alt="" />
               </div>
@@ -141,11 +141,11 @@ function HotelPage(props) {
         {/* roomService */}
         <>
           <div className="row MKrowService">
-            <div className="MKroomService col-12 col-sm-12 col-md-6 col-xl-6 ">
+            <div className="MKroomService">
               <button type="button" className="MKcollapsible ">
                 設備＆服務
               </button>
-              <div className="MKcontent">
+              {/* <div className="MKcontent">
                 <div className="MKservice">
                   <ul className="MKservice">
                     <li>
@@ -196,13 +196,13 @@ function HotelPage(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="MKcreditCard col-12 col-sm-12 col-md-6 col-xl-6 ">
               <button type="button" className="MKcollapsible">
                 付款方式
               </button>
-              <div className="MKcontent">
+              {/* <div className="MKcontent">
                 <div className="MKservice">
                   <ul className="MKservice">
                     <li>
@@ -233,7 +233,7 @@ function HotelPage(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </>
@@ -255,19 +255,19 @@ function HotelPage(props) {
                     </div>
                     <div className="MKstart">
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                     </div>
                     <div className="MKcomMsn">
@@ -287,19 +287,19 @@ function HotelPage(props) {
                     </div>
                     <div className="MKstart">
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                     </div>
                     <div className="MKcomMsn">
@@ -310,14 +310,13 @@ function HotelPage(props) {
                   </div>
                 </div>
               </div>
-              <div className="MKcommBtnH">
-                <di className="MKcomButton" type="submit">
+              <div className="d-flex justify-content-center">
+                <div className="MKHPutton mt-5 mb-5" type="submit">
                   <div>
-                    <div className="" id="MKcard-btn">
-                      我要評價
-                    </div>
+                    {/* 點擊按鈕跳對照id分頁 */}
+                    <button className="MKHPcard-btn">我要回覆</button>
                   </div>
-                </di>
+                </div>
               </div>
             </div>
           </div>

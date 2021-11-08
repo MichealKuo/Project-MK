@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import './AdoptPage.scss'
+import { FaPaw } from 'react-icons/fa'
+import { AiFillMail } from 'react-icons/ai'
 
 import Axios from 'axios'
 
@@ -55,16 +57,16 @@ function AdoptPage(props) {
     <>
       <Container>
         {/* header */}
-        <Row>
+        <>
           <div className="MKheader-title">
             <p>
               貓咪認養資訊:
               <span className="MKtitle-text"> {adoptPage.name}</span>
             </p>
           </div>
-        </Row>
+        </>
         {/* avatar */}
-        <Row>
+        <>
           <div className="MKrowAvatar">
             <div className="MKadoptPageAvatar ">
               <img src={adoptPage.avatar} alt="" />
@@ -81,14 +83,14 @@ function AdoptPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* Detail Box */}
-        <Row>
+        <>
           <div className="MKrowDetail">
             <div className="MKdetail">
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>姓名</p>
@@ -99,7 +101,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>狀態</p>
@@ -110,7 +112,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>種類</p>
@@ -121,7 +123,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>體型</p>
@@ -132,7 +134,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>地區</p>
@@ -143,7 +145,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>電話</p>
@@ -154,7 +156,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>性別</p>
@@ -165,7 +167,7 @@ function AdoptPage(props) {
               </ul>
               <ul className="MKdetail-ul">
                 <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
+                  <FaPaw />
                 </li>
                 <li className="MKdetail-title">
                   <p>個性</p>
@@ -179,8 +181,8 @@ function AdoptPage(props) {
               <div className="" type="submit">
                 <div>
                   <button className="button-G">
-                    <span className=" mr-3">
-                      <i className="far fa-envelope"></i>
+                    <span className="MailBtn">
+                      <AiFillMail />
                     </span>
                     私信飼主
                   </button>
@@ -188,7 +190,7 @@ function AdoptPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* Comments */}
         {/* <Row>
           <div className="MKrowComment">

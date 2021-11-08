@@ -58,7 +58,7 @@ function HotelList() {
               <div className="MKfilter">
                 <div className="MKselector ">
                   <p>地區</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">台北</option>
                     <option value="">新北</option>
@@ -70,7 +70,7 @@ function HotelList() {
                 </div>
                 <div className="MKselector ">
                   <p>價錢</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">500~1500</option>
                     <option value="">1500~2500</option>
@@ -79,15 +79,15 @@ function HotelList() {
                 </div>
                 <div className="MKselector ">
                   <p>服務</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">修剪毛髮</option>
                     <option value="">美容清潔</option>
                     <option value="">疫苗注射</option>
                   </select>
                 </div>
-                <div className="MKselector " id="MKad-filter">
-                  <button id="MKsearch-btn" type="submit">
+                <div className="MKselector ">
+                  <button className="MKsearch-btn" type="submit">
                     {/* <i className="fas fa-search"></i> */}
                     <BsSearch />
                   </button>

@@ -38,24 +38,22 @@ const AdoptCards = () => {
         <div className="MKALlist">
           {paginatedPosts.map((v, i) => {
             return (
-              <p key={i} className="MKDisplayLi col-10 col-md-4">
+              <p key={i} className="MKDisplayLi">
                 <div className=" MKALcard ">
                   <div className="MKALcard-context">
                     <div className="MKALavatar">
                       <img src={v.avatar} alt="" />
                     </div>
                     <div className="">
-                      <p id="MKALcard-title">{v.name}</p>
-                      <p id="MKALcard-text"> {v.info}</p>
+                      <p className="MKALcard-title">{v.name}</p>
+                      <p className="MKALcard-text"> {v.info}</p>
                     </div>
                   </div>
-                  <div className="MKALbutton mt-5 mb-5" type="submit">
+                  <div className="MKALbutton" type="submit">
                     <div>
                       {/* 點擊按鈕跳對照id分頁 */}
                       <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                        <button className="" id="MKALcard-btn">
-                          了解更多
-                        </button>
+                        <button className="MKALcard-btn">了解更多</button>
                       </Link>
                     </div>
                   </div>
@@ -65,9 +63,9 @@ const AdoptCards = () => {
           })}
         </div>
       </div>
-      <div>
+      <div className="MKpagination">
         {/* 分頁按鈕 */}
-        <ul className="pagination d-flex justify-content-center ">
+        <ul className="pagination">
           {pages.map((page) => (
             <li
               className={
