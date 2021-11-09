@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
 import './HotelPage.scss'
 import { AiFillStar } from 'react-icons/ai'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import Axios from 'axios'
-
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBMask,
+  MDBContainer,
+} from 'mdbreact'
 function HotelPage(props) {
   console.log(props)
 
@@ -65,8 +72,8 @@ function HotelPage(props) {
           </div>
         </>
         {/* avatar */}
-        <>
-          <div className="MKrow MKHotelRowAvatar">
+        <div>
+          {/* <div className="MKrow MKHotelRowAvatar">
             <div className="MKHotelAvatar">
               <div className="MKbigHotelAvatar">
                 <img src={hotelPage.avatar} alt="" />
@@ -83,8 +90,57 @@ function HotelPage(props) {
                 </div>
               </div>
             </div>
-          </div>
-        </>
+          </div> */}
+        </div>
+        <div className="MKAPCarousel">
+          <MDBCarousel
+            activeItem={1}
+            length={3}
+            // showControls={true}
+            // showIndicators={true}
+            // className="z-depth-1"
+          >
+            <MDBCarouselInner className="MKHPCarousel">
+              <MDBCarouselItem itemId="1">
+                <MDBView className="MKHPCarouselBox">
+                  <img
+                    className="MKHPCarouselimg"
+                    src={hotelPage.avatar}
+                    alt="First slide"
+                  />
+                  {/* <MDBMask overlay="black-light" /> */}
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="2">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar01}
+                    alt="Second slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="3">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar02}
+                    alt="Third slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="4">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar03}
+                    alt="Third slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+            </MDBCarouselInner>
+          </MDBCarousel>
+        </div>
         {/* booking form */}
         {/* <Row>
           <div className="MKbooking">

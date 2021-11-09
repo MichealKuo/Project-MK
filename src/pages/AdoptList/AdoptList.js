@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Container } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
@@ -48,14 +47,14 @@ function AdoptList() {
         <>
           <div className="MKRWD-banner">
             <div className="MKrwd-banner-text">
-              <p>毛孩找家</p>
+              <h5>毛孩找家</h5>
               <br />
-              <h5>
+              <p>
                 你的一眼瞬間
                 <br />
                 <br />
                 就讓我有了被愛的機會
-              </h5>
+              </p>
             </div>
           </div>
         </>

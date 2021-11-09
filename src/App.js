@@ -27,24 +27,26 @@ function App() {
     <Router>
       <>
         <MyNavbar />
-        <MultiLevelBreadCrumb />
-        <ScrollToTop>
-          <Switch>
-            <Route path="/adoptlist/adoptpage/:id?">
-              <AdoptPage />
-            </Route>
-            <Route path="/hotellist/hotelpage/:id?">
-              <HotelPage />
-            </Route>
-            <Route path="/adoptlist/">
-              <AdoptList />
-            </Route>
-            <Route path="/hotellist">
-              <HotelList />
-            </Route>
-            {/* AG */}
-          </Switch>
-        </ScrollToTop>
+        <MainContent>
+          <MultiLevelBreadCrumb />
+          <ScrollToTop>
+            <Switch>
+              <Route path="/adoptlist/adoptpage/:id?">
+                <AdoptPage />
+              </Route>
+              <Route path="/hotellist/hotelpage/:id?">
+                <HotelPage />
+              </Route>
+              <Route path="/adoptlist/">
+                <AdoptList />
+              </Route>
+              <Route path="/hotellist">
+                <HotelList />
+              </Route>
+            </Switch>
+          </ScrollToTop>
+        </MainContent>
+        <MyFooter />
 
         {/* end 匹配路由表 */}
       </>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Container } from 'react-bootstrap'
 import './HotelList.scss'
 
 import HotelListBanner from './hotellist-banner_300x300.jpg'
@@ -110,7 +109,7 @@ function HotelList() {
         {/* HotelCardList */}
         <HotelCards />
         {/* pagination */}
-        <Carousel />
+        {/* <Carousel /> */}
       </>
     </>
   )

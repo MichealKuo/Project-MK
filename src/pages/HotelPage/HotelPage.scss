@@ -17,34 +17,49 @@
 
 /* hotel-avatar */
 
-.MKHotelRowAvatar {
+// .MKHotelRowAvatar {
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+// .MKHotelAvatar {
+//   width: 80%;
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+// .MKbigHotelAvatar {
+//   width: 55%;
+//   margin-left: 2rem;
+// }
+// .MKbigHotelAvatar > img {
+//   width: 100%;
+//   object-fit: fill;
+//   border-radius: 30px;
+// }
+// .MKsmallHotelAvatar {
+//   display: flex;
+//   justify-content: space-around;
+//   flex-direction: column;
+// }
+// .MKsmallHotelAvatar > img {
+//   width: 120px;
+//   height: 120px;
+//   border-radius: 30px;
+//   object-fit: fill;
+// }
+.MKHPCarousel {
   margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
+  max-width: 80%;
+  max-height: 700px;
 }
-.MKHotelAvatar {
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
+.MKHPCarouselBox {
+  max-width: 100%;
+  max-height: 700px;
 }
-.MKbigHotelAvatar {
-  width: 55%;
-  margin-left: 2rem;
-}
-.MKbigHotelAvatar > img {
+.MKHPCarouselimg {
   width: 100%;
-  object-fit: fill;
-  border-radius: 30px;
-}
-.MKsmallHotelAvatar {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-.MKsmallHotelAvatar > img {
-  width: 120px;
-  height: 120px;
-  border-radius: 30px;
+  min-height: 700px;
+  border-radius: 30px 30px 0 0;
   object-fit: fill;
 }
 /* booking form */
@@ -242,7 +257,7 @@
   object-fit: fill;
 }
 /* btn */
-.MKHProwBtn{
+.MKHProwBtn {
   display: flex;
   justify-content: center;
 }
@@ -257,8 +272,6 @@
   border-radius: 90px;
   text-align: center;
   background-color: #fff;
-
-  
 }
 .MKHPutton:hover {
   background-color: #f5df4d;

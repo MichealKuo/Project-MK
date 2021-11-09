@@ -30,6 +30,7 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "sass": "^1.43.3",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
