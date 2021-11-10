@@ -2,23 +2,24 @@ export const getComments = async () => {
   return [
     {
       id: '1',
-      body: ' Hi,想跟你約時間見見她(他)',
-      username: 'Jack',
-      userId: '1',
-      parentId: null,
-      img: 'https://img.onl/5gmGze',
-      createdAt: '2021-11-06',
-    },
-    {
-      id: '2',
-      body: '好呀，有興趣認養都可以跟我安排時間唷',
+      body: '好呀，這週六方便嗎？',
       username: 'Host',
       userId: '2',
       parentId: null,
       img: 'https://img.onl/gwnuMO',
 
-      createdAt: '2021-11-09T23:00:33.010+02:00',
+      createdAt: '2021-09-16',
     },
+    {
+      id: '2',
+      body: ' Hi,想跟你約時間見見她(他)',
+      username: 'Jack',
+      userId: '1',
+      parentId: null,
+      img: 'https://img.onl/5gmGze',
+      createdAt: '2021-09-15',
+    },
+
     // {
     //   id: '3',
     //   body: 'First comment first child',

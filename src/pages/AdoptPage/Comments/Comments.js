@@ -4,8 +4,6 @@ import Comment from './Comment'
 import {
   getComments as getCommentsApi,
   createComment as createCommentApi,
-  updateComment as updateCommentApi,
-  deleteComment as deleteCommentApi,
 } from '../Comments/CommentsApi'
 
 const Comments = ({ commentsUrl, currentUserId }) => {
@@ -28,29 +26,6 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     })
   }
 
-  // const updateComment = (text, commentId) => {
-  //   updateCommentApi(text).then(() => {
-  //     const updatedBackendComments = backendComments.map((backendComment) => {
-  //       if (backendComment.id === commentId) {
-  //         return { ...backendComment, body: text }
-  //       }
-  //       return backendComment
-  //     })
-  //     setBackendComments(updatedBackendComments)
-  //     setActiveComment(null)
-  //   })
-  // }
-  // const deleteComment = (commentId) => {
-  //   if (window.confirm('Are you sure you want to remove comment?')) {
-  //     deleteCommentApi().then(() => {
-  //       const updatedBackendComments = backendComments.filter(
-  //         (backendComment) => backendComment.id !== commentId
-  //       )
-  //       setBackendComments(updatedBackendComments)
-  //     })
-  //   }
-  // }
-
   useEffect(() => {
     getCommentsApi().then((data) => {
       setBackendComments(data)
@@ -63,6 +38,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
         <div className="MKcom-header">
           <h6 className="MKcom-header-title">留言板</h6>
         </div>
+        <CommentForm submitLabel="send" handleSubmit={addComment} />
 
         <div className="">
           {rootComments.map((rootComment) => (
@@ -73,14 +49,11 @@ const Comments = ({ commentsUrl, currentUserId }) => {
               activeComment={activeComment}
               setActiveComment={setActiveComment}
               addComment={addComment}
-              // deleteComment={deleteComment}
-              // updateComment={updateComment}
               currentUserId={currentUserId}
             />
           ))}
         </div>
       </div>
-      <CommentForm submitLabel="send" handleSubmit={addComment} />
     </div>
   )
 }

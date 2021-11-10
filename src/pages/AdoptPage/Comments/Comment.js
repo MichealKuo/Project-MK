@@ -5,16 +5,10 @@ const Comment = ({
   replies,
   setActiveComment,
   activeComment,
-  updateComment,
-  deleteComment,
   addComment,
   parentId = null,
   currentUserId,
 }) => {
-  const isEditing =
-    activeComment &&
-    activeComment.id === comment.id &&
-    activeComment.type === 'editing'
   const isReplying =
     activeComment &&
     activeComment.id === comment.id &&
@@ -73,8 +67,6 @@ const Comment = ({
                   key={reply.id}
                   setActiveComment={setActiveComment}
                   activeComment={activeComment}
-                  updateComment={updateComment}
-                  deleteComment={deleteComment}
                   addComment={addComment}
                   parentId={comment.id}
                   replies={[]}
