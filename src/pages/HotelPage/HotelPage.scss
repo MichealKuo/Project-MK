@@ -17,36 +17,7 @@
 
 /* hotel-avatar */
 
-// .MKHotelRowAvatar {
-//   margin: 0 auto;
-//   display: flex;
-//   justify-content: space-evenly;
-// }
-// .MKHotelAvatar {
-//   width: 80%;
-//   display: flex;
-//   justify-content: space-evenly;
-// }
-// .MKbigHotelAvatar {
-//   width: 55%;
-//   margin-left: 2rem;
-// }
-// .MKbigHotelAvatar > img {
-//   width: 100%;
-//   object-fit: fill;
-//   border-radius: 30px;
-// }
-// .MKsmallHotelAvatar {
-//   display: flex;
-//   justify-content: space-around;
-//   flex-direction: column;
-// }
-// .MKsmallHotelAvatar > img {
-//   width: 120px;
-//   height: 120px;
-//   border-radius: 30px;
-//   object-fit: fill;
-// }
+
 .MKHPCarousel {
   margin: 0 auto;
   max-width: 800px;
@@ -192,16 +163,6 @@
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.201);
 }
 /* map */
-.MKrow-map {
-  display: flex;
-  justify-content: center;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-}
-.MKrow-map > iframe {
-  width: 80%;
-  height: 25rem;
-}
 
 /* hotel comment */
 .MKHotelRowComment {
