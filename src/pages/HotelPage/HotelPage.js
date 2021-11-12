@@ -4,8 +4,13 @@ import { AiFillStar } from 'react-icons/ai'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
-import GoogleMap from './GoogleMap'
 import Axios from 'axios'
+// map
+import { Key } from './Key' // 引入 API key
+import GoogleMapReact from 'google-map-react'
+
+import { FcHome } from 'react-icons/fc'
+
 import {
   MDBCarousel,
   MDBCarouselCaption,
@@ -42,7 +47,8 @@ function HotelPage(props) {
     avatar02: '',
     avatar03: '',
     name: '',
-    location: '',
+    lat: '',
+    lng: '',
     cell: '',
     address: '',
   })
@@ -59,6 +65,16 @@ function HotelPage(props) {
       }
     }
   }, [hotelList, props.match.params.id])
+  // map
+  const AnyReactComponent = ({ text }) => (
+    <div className="MKMapBox">
+      <div >
+        <FcHome className="MKMapIcon"> </FcHome>
+      </div>
+      <div className="MKMapInfo">{text}</div>
+    </div>
+  )
+
   return (
     <>
       <>
@@ -294,7 +310,20 @@ function HotelPage(props) {
           </div>
         </>
         {/* map */}
-        <GoogleMap />
+        <div style={{ height: '50vh', width: '70%', margin: '10rem auto' }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
+            defaultZoom={16}
+          >
+            <AnyReactComponent
+              lat={hotelPage.lat}
+              lng={hotelPage.lng}
+              text={hotelPage.name}
+              zoom={17}
+            />
+          </GoogleMapReact>
+        </div>
         {/* hotel comments */}
         <>
           <div className="MKHotelRowComment">

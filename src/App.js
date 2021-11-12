@@ -14,6 +14,7 @@ import AdoptList from './pages/AdoptList/AdoptList'
 import AdoptPage from './pages/AdoptPage/AdoptPage'
 import HotelList from './pages/HotelList/HotelList'
 import HotelPage from './pages/HotelPage/HotelPage'
+import AdoptPageFakeData from './pages/AdoptPage/AdoptPageFakeData'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
@@ -31,6 +32,9 @@ function App() {
           <MultiLevelBreadCrumb />
           <ScrollToTop>
             <Switch>
+              <Route path="/adoptlist/adoptpage/66">
+                <AdoptPageFakeData />
+              </Route>
               <Route path="/adoptlist/adoptpage/:id?">
                 <AdoptPage />
               </Route>

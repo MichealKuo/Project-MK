@@ -7,14 +7,29 @@ import HotelCards from './HotelCard'
 import Carousel from './Carousel'
 import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
+// map
+import GoogleMapReact from 'google-map-react'
+import { FcHome } from 'react-icons/fc'
+import { Key } from './Key' // 引入 API key
 
 function HotelList() {
   const [hotelList, setHotelList] = useState([])
   useEffect(() => {
     Axios.get('http://localhost:3002/api/gethotellist').then((response) => {
       setHotelList(response.data)
+      console.log(response.data)
     })
   }, [])
+
+  // map
+  const AnyReactComponent = ({ text }) => (
+    <div className="MKMapBox">
+      <div>
+        <FcHome className="MKMapIcon"> </FcHome>
+      </div>
+      <div className="MKMapInfo">{text}</div>
+    </div>
+  )
   return (
     <>
       <>
@@ -97,11 +112,22 @@ function HotelList() {
           </div>
         </>
         {/* map */}
-        <>
-          <div className="MKrow-map">
-            <iframe></iframe>
-          </div>
-        </>
+        <div style={{ height: '50vh', width: '70%', margin: '10rem auto' }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
+            defaultZoom={15}
+          >
+            {hotelList.map((v) => (
+              <AnyReactComponent
+                lat={v.lat}
+                lng={v.lng}
+                text={v.name}
+                zoom={14}
+              />
+            ))}
+          </GoogleMapReact>
+        </div>
         {/* HotelCardList */}
         <HotelCards />
         {/* pagination */}
