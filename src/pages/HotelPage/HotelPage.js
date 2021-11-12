@@ -10,6 +10,8 @@ import { Key } from './Key' // 引入 API key
 import GoogleMapReact from 'google-map-react'
 
 import { FcHome } from 'react-icons/fc'
+// comments
+import Comments from './Comments/Comments'
 
 import {
   MDBCarousel,
@@ -68,7 +70,7 @@ function HotelPage(props) {
   // map
   const AnyReactComponent = ({ text }) => (
     <div className="MKMapBox">
-      <div >
+      <div>
         <FcHome className="MKMapIcon"> </FcHome>
       </div>
       <div className="MKMapInfo">{text}</div>
@@ -86,27 +88,6 @@ function HotelPage(props) {
             </p>
           </div>
         </>
-        {/* avatar */}
-        <div>
-          {/* <div className="MKrow MKHotelRowAvatar">
-            <div className="MKHotelAvatar">
-              <div className="MKbigHotelAvatar">
-                <img src={hotelPage.avatar} alt="" />
-              </div>
-              <div className="MKsmallHotelAvatar">
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar01} alt="" />
-                </div>
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar02} alt="" />
-                </div>
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar03} alt="" />
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
         <div className="MKAPCarousel">
           <MDBCarousel
             activeItem={1}
@@ -217,7 +198,7 @@ function HotelPage(props) {
               <button type="button" className="MKcollapsible ">
                 設備＆服務
               </button>
-              {/* <div className="MKcontent">
+              <div className="MKcontent">
                 <div className="MKservice">
                   <ul className="MKservice">
                     <li>
@@ -268,7 +249,7 @@ function HotelPage(props) {
                     </li>
                   </ul>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div className="MKcreditCard col-12 col-sm-12 col-md-6 col-xl-6 ">
               <button type="button" className="MKcollapsible">
@@ -326,7 +307,7 @@ function HotelPage(props) {
         </div>
         {/* hotel comments */}
         <>
-          <div className="MKHotelRowComment">
+          {/* <div className="MKHotelRowComment">
             <div className="MKHotelComm">
               <div className="MKcom-header">
                 <h6 className="MKcom-header-title">旅宿評價</h6>
@@ -400,13 +381,13 @@ function HotelPage(props) {
               <div className="MKHProwBtn">
                 <div className="MKHPutton" type="submit">
                   <div>
-                    {/* 點擊按鈕跳對照id分頁 */}
                     <button className="MKHPcard-btn">我要回覆</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Comments currentUserId="1" />
         </>
       </>
     </>

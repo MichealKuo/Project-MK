@@ -4,7 +4,11 @@ import Axios from 'axios'
 import Dash from 'lodash'
 const pageSize = 9
 
-const AdoptCards = () => {
+const AdoptCards = (props) => {
+  const { selectType, selectGender, selectLocation } = props
+  console.log(selectType)
+  console.log(selectLocation)
+  console.log(selectGender)
   //petlist data
   const [petList, setPetList] = useState([])
   //paginatePart
@@ -27,6 +31,17 @@ const AdoptCards = () => {
     const paginatedPost = Dash(petList).slice(startIndex).take(pageSize).value()
     setPaginatedPosts(paginatedPost)
   }
+  // filter
+  const [filterType, setFilterType] = useState('')
+  useEffect(() => {
+    if (selectType === petList.type) {
+      filterType.map((v) => {
+        return
+      })
+    }
+    console.log(filterType)
+    console.log(selectType)
+  }, [filterType])
   return (
     <>
       {/* 引入資料 */}

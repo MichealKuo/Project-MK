@@ -28,7 +28,7 @@ function HotelCard() {
       setPaginatedPosts(Dash(response.data).slice(0).take(pageSize).value())
     })
   }, [])
-  console.log(paginatedPosts)
+  // console.log(paginatedPosts)
 
   const pageCount = hotelList ? Math.ceil(hotelList.length / pageSize) : 0
   // if ([pageCount === 1]) return null
