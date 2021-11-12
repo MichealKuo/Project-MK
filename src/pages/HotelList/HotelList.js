@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Link } from 'react'
 import './HotelList.scss'
 
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
-import Carousel from './Carousel'
 import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
 // map
@@ -22,14 +21,17 @@ function HotelList() {
   }, [])
 
   // map
-  const AnyReactComponent = ({ text }) => (
+  const AnyReactComponent = ({ text, sid }) => (
     <div className="MKMapBox">
-      <div>
-        <FcHome className="MKMapIcon"> </FcHome>
-      </div>
-      <div className="MKMapInfo">{text}</div>
+      <a href={'/hotellist/hotelpage/' + sid}>
+        <div>
+          <FcHome className="MKMapIcon"> </FcHome>
+        </div>
+        <div className="MKMapInfo">{text}</div>
+      </a>
     </div>
   )
+
   return (
     <>
       <>
@@ -124,6 +126,7 @@ function HotelList() {
                 lng={v.lng}
                 text={v.name}
                 zoom={14}
+                sid={v.sid}
               />
             ))}
           </GoogleMapReact>
@@ -131,7 +134,6 @@ function HotelList() {
         {/* HotelCardList */}
         <HotelCards />
         {/* pagination */}
-        {/* <Carousel /> */}
       </>
     </>
   )
