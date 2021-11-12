@@ -112,6 +112,19 @@
 // }
 
 /* roomService */
+.collapse-button {
+  display: block;
+  width: 100%;
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+
+.collapsed-content.expanded {
+  display: block;
+}
+
 .MKrowService {
   display: flex;
   width: 70%;
@@ -120,15 +133,22 @@
 }
 .MKroomService {
   width: 50%;
+  align-content: center;
+  text-align: center;
 }
 .MKcreditCard {
   width: 50%;
 }
+
 .MKservice {
+  width: 90%;
   list-style: none;
   display: flex;
   margin-left: 2rem;
   padding-top: 1rem;
+  padding-left: 3rem;
+  align-items: center;
+  align-content: center;
 }
 .MKservice > li {
   padding-left: 3rem;
@@ -156,8 +176,6 @@
   border-radius: 0 0 15px 15px;
   padding: 0rem 18px;
   background-color: white;
-  max-height: 0;
-  overflow: hidden;
   transition: max-height 0.2s ease-out;
   box-shadow: 5px 2px 10px rgba(232, 185, 185, 0.201);
 }
@@ -306,8 +324,6 @@
   }
   .MKroomService {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
   }
   .MKcreditCard {
     width: 100%;
