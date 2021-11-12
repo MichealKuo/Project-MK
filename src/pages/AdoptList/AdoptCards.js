@@ -5,10 +5,6 @@ import Dash from 'lodash'
 const pageSize = 9
 
 const AdoptCards = () => {
-  // const AdoptCards = ({ petList, loading }) => {
-  //   if (loading) {
-  //     return <h2>Loading....</h2>
-  //   }
   //petlist data
   const [petList, setPetList] = useState([])
   //paginatePart

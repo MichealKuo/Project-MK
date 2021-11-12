@@ -114,7 +114,10 @@ function HotelList() {
           </div>
         </>
         {/* map */}
-        <div style={{ height: '50vh', width: '70%', margin: '10rem auto' }}>
+        <div
+          className="MKmap"
+          style={{ height: '50vh', width: '70%', margin: '10rem auto' }}
+        >
           <GoogleMapReact
             bootstrapURLKeys={{ key: Key }}
             defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
@@ -125,7 +128,7 @@ function HotelList() {
                 lat={v.lat}
                 lng={v.lng}
                 text={v.name}
-                zoom={14}
+                zoom={1}
                 sid={v.sid}
               />
             ))}

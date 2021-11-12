@@ -7,21 +7,14 @@ import { BsSearch } from 'react-icons/bs'
 //Card
 import AdoptCards from './AdoptCards'
 
-//pagination
-//data axios
-// import Axios from 'axios'
 function AdoptList() {
-  //data axios
-  // const [petList, setPetList] = useState([])
-  // useEffect(() => {
-  //   Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
-  //     setPetList(response.data)
-  //   })
-  // }, [])
-
   const [selectType, setSelectType] = useState('')
   const [selectLocation, setSelectLocation] = useState('')
   const [selectGender, setSelectGender] = useState('')
+  const handleType = (e) => {
+    setSelectType(e.target.value)
+    console.log(e.target.value)
+  }
   return (
     <>
       <>
@@ -68,9 +61,7 @@ function AdoptList() {
                   <select
                     value={selectType}
                     className="MKad-filter"
-                    onChange={(e) => {
-                      setSelectType(e.target.value)
-                    }}
+                    onChange={handleType}
                   >
                     <option value="">---請選擇---</option>
                     <option value="貓咪">貓咪</option>

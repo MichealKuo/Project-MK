@@ -314,7 +314,7 @@ function HotelPage(props) {
           <GoogleMapReact
             bootstrapURLKeys={{ key: Key }}
             defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
-            defaultZoom={16}
+            defaultZoom={15}
           >
             <AnyReactComponent
               lat={hotelPage.lat}

@@ -1,11 +1,6 @@
 // 使用套件
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useLocation,
-} from 'react-router-dom'
-import React, { useState } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React from 'react'
 import './Styles/global.scss'
 
 // 頁面用元件
