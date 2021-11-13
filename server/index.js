@@ -34,6 +34,13 @@ app.get('/api/getpetlist', (req, res) => {
     console.log(err)
   })
 })
+// app.get('/api/getpetlist', (req, res) => {
+//   const sql = `SELECT * FROM petlist WHERE type='狗狗' and location= '台北市' and gender='女孩'  `
+//   db.query(sql, (err, result) => {
+//     res.send(result)
+//     console.log(err)
+//   })
+// })
 //get hotel list
 app.get('/api/gethotellist', (req, res) => {
   const sql = 'SELECT * FROM hotellist '

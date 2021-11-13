@@ -187,9 +187,8 @@
 .commentTextarea {
   margin-top: 1rem;
   padding: 8px 10px;
-
   width: 100%;
-  height: 3rem;
+  max-height: 3rem;
   border: 3px solid #f9f5dc;
   outline: none;
   border-radius: 5px;
@@ -342,16 +341,15 @@
     margin-bottom: 1rem;
     padding: 0;
     padding-top: 1rem;
-
     // margin: auto ;
   }
   .MKcomReply {
     width: 350px;
-    height: 10rem;
+    height: 100%;
     // margin: 0;
   }
   .commentTextarea {
-    width: 200px;
+    width: 250px;
     max-height: 4rem;
   }
 }

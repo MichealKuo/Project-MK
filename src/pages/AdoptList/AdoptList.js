@@ -6,6 +6,7 @@ import { BsSearch } from 'react-icons/bs'
 
 //Card
 import AdoptCards from './AdoptCards'
+import { types } from 'sass'
 
 function AdoptList() {
   const [selectType, setSelectType] = useState('')

@@ -19,8 +19,10 @@ const AdoptCards = (props) => {
       setPetList(response.data)
       setPaginatedPosts(Dash(response.data).slice(0).take(pageSize).value())
     })
-  }, [])
+  }, [selectType, selectLocation, selectGender])
   // console.log(paginatedPosts)
+  console.log(petList)
+  console.log(paginatedPosts)
 
   const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
   // if ([pageCount === 1]) return null
@@ -31,17 +33,7 @@ const AdoptCards = (props) => {
     const paginatedPost = Dash(petList).slice(startIndex).take(pageSize).value()
     setPaginatedPosts(paginatedPost)
   }
-  // filter
-  const [filterType, setFilterType] = useState('')
-  useEffect(() => {
-    if (selectType === petList.type) {
-      filterType.map((v) => {
-        return
-      })
-    }
-    console.log(filterType)
-    console.log(selectType)
-  }, [filterType])
+
   return (
     <>
       {/* 引入資料 */}
