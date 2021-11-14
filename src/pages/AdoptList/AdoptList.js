@@ -67,6 +67,10 @@ function AdoptList() {
     const startIndex = (pageNo - 1) * pageSize
     const paginatedPost = Dash(petList).slice(startIndex).take(pageSize).value()
     setPaginatedPosts(paginatedPost)
+    window.scrollTo({
+      top: 750,
+      behavior: 'smooth',
+    })
   }
 
   return (
