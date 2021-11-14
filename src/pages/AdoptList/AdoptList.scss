@@ -69,6 +69,7 @@
   background-color: #f5df4d;
   border-radius: 90px;
   flex-wrap: wrap;
+  min-height: 4rem;
 }
 .MKselector > p {
   margin-bottom: 0;
@@ -76,6 +77,7 @@
 }
 .MKselector > select {
   border: 0;
+  cursor: pointer;
   background-color: rgb(255, 255, 255);
   /* needed */
   -webkit-appearance: none;
@@ -85,14 +87,13 @@
 .MKselector > select:focus {
   outline: none;
 }
-.MKselector > select > option {
-  color: #f5df4d;
-}
+
 .MKad-filter {
   font-size: 0.9rem;
   text-align: center;
   width: 150px;
 }
+
 
 /* list  cards  */
 

@@ -211,9 +211,9 @@ function HotelPage(props) {
             <div className="MKroomService ">
               <Collapse>
                 <div className="MKcontent">
-                  <div className="MKservice">
+                  <div className="MKHPDetailBox">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaSyringe />
                       </li>
                       <li>
@@ -221,39 +221,39 @@ function HotelPage(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaCookieBite />
                       </li>
                       <li>
-                        <p>下午茶餐點</p>
+                        <p>下午茶點</p>
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaMusic />
                       </li>
                       <li>
-                        <p>紓緩音療癒</p>
+                        <p>音樂療癒</p>
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaSearch />
                       </li>
                       <li>
-                        <p>健檢</p>
+                        <p>建康檢查</p>
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <BsScissors />
                       </li>
                       <li>
@@ -267,19 +267,19 @@ function HotelPage(props) {
             <div className="MKcreditCard  ">
               <Collapse1>
                 <div className="MKcontent ">
-                  <div className="MKservice">
+                  <div className="MKHPDetailBox">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaRegCreditCard />
                       </li>
                       <li>
-                        <p>信用卡</p>
+                        <p>信用卡支付</p>
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <FaLine />
                       </li>
                       <li>
@@ -287,13 +287,13 @@ function HotelPage(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="MKservice">
+                  <div className="">
                     <ul className="MKservice">
-                      <li>
+                      <li className="MKdetailIcon">
                         <MdOutlineAtm />
                       </li>
                       <li>
-                        <p>ATM</p>
+                        <p>ATM轉帳</p>
                       </li>
                     </ul>
                   </div>

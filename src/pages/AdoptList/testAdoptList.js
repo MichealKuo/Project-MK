@@ -14,7 +14,14 @@ function AdoptList() {
   const [selectType, setSelectType] = useState('')
   const [selectLocation, setSelectLocation] = useState('')
   const [selectGender, setSelectGender] = useState('')
-  //adoptCardData
+
+  const handleLocation = (e) => {
+    setSelectLocation(e.target.value)
+  }
+  const handleGender = (e) => {
+    setSelectGender(e.target.value)
+  }
+  //adopt card
   const [petList, setPetList] = useState([])
   //paginatePart
   const [paginatedPosts, setPaginatedPosts] = useState([])
@@ -29,36 +36,31 @@ function AdoptList() {
   const handleType = (e) => {
     setSelectType(e.target.value)
 
-    // if (selectType !== '') {
-    //   const filteredData = paginatedPosts.filter((item) => {
-    //     return Object.values(item).join('').includes(selectType)
-    //   })
-    //   setFilteredResults(filteredData)
-    // } else {
-    //   setFilteredResults(paginatedPosts)
-    // }
+    if (selectType !== '') {
+      const filteredData = paginatedPosts.filter((item) => {
+        return Object.values(item)
+          .join('')
+          .toLowerCase()
+          .includes(selectType.toLowerCase())
+      })
+      setFilteredResults(filteredData)
+    } else {
+      setFilteredResults(paginatedPosts)
+    }
   }
-  const handleLocation = (e) => {
-    setSelectLocation(e.target.value)
-  }
-  const handleGender = (e) => {
-    setSelectGender(e.target.value)
-  }
-
   const filteredData = paginatedPosts.filter((item) => {
     return Object.values(item)
       .join('')
-      .includes(selectType + selectLocation + selectGender)
+      .toLowerCase()
+      .includes(selectType.toLowerCase())
   })
-
   console.log(selectType)
   console.log(filteredData)
   console.log(paginatedPosts)
-  // const [filteredResults, setFilteredResults] = useState([])
+  const [filteredResults, setFilteredResults] = useState([])
   // console.log(paginatedPosts)
   // console.log(petList)
   // console.log(paginatedPosts)
-  // console.log(filteredResults)
 
   const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
   const pages = Dash.range(1, pageCount + 1)
@@ -148,11 +150,7 @@ function AdoptList() {
                   </select>
                 </div>
                 <div className=" ">
-                  <button
-                    className="MKsearch-btn"
-                    type="submit"
-                    // onClick={(handleType, handleLocation, handleGender)}
-                  >
+                  <button className="MKsearch-btn" type="submit">
                     <BsSearch />
                   </button>
                 </div>
@@ -172,8 +170,8 @@ function AdoptList() {
           /> */}
           <div className="MKALrow-list">
             <div className="MKALlist">
-              {'(selectType & selectGender & selectLocation)'.length >= 1
-                ? filteredData.map((v, i) => {
+              {selectType.length > 1
+                ? filteredResults.map((v, i) => {
                     return (
                       <p key={i} className="MKDisplayLi col-12 col-md-4">
                         <div className=" MKALcard ">
