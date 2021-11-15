@@ -7,7 +7,6 @@ import { BsSearch } from 'react-icons/bs'
 // import AdoptCards from './AdoptCards'
 import Axios from 'axios'
 import Dash from 'lodash'
-const pageSize = 9
 
 function AdoptList() {
   // filter
@@ -44,7 +43,6 @@ function AdoptList() {
   const handleGender = (e) => {
     setSelectGender(e.target.value)
   }
-
   const filteredData = paginatedPosts.filter((item) => {
     return Object.values(item)
       .join('')
@@ -59,7 +57,7 @@ function AdoptList() {
   // console.log(petList)
   // console.log(paginatedPosts)
   // console.log(filteredResults)
-
+  const pageSize = 9
   const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
   const pages = Dash.range(1, pageCount + 1)
   const pagination = (pageNo) => {
@@ -151,7 +149,8 @@ function AdoptList() {
                     <option value="女孩">女孩</option>
                   </select>
                 </div>
-                <div className=" ">
+                {/* search BTN */}
+                {/* <div className=" ">
                   <button
                     className="MKsearch-btn"
                     type="submit"
@@ -159,7 +158,7 @@ function AdoptList() {
                   >
                     <BsSearch />
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -176,7 +175,7 @@ function AdoptList() {
           /> */}
           <div className="MKALrow-list">
             <div className="MKALlist">
-              {'(selectType & selectGender & selectLocation)'.length >= 1
+              {'(selectType & selectGender & selectLocation)'.length > 1
                 ? filteredData.map((v, i) => {
                     return (
                       <p key={i} className="MKDisplayLi col-12 col-md-4">
