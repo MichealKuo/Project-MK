@@ -40,6 +40,7 @@ function HotelCard() {
       .slice(startIndex)
       .take(pageSize)
       .value()
+
     setPaginatedPosts(paginatedPost)
   }
   return (

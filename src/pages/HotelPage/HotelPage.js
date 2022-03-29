@@ -89,6 +89,7 @@ function HotelPage(props) {
       <div className="MKMapInfo">{text}</div>
     </div>
   )
+
   // detailBtn
   const [isCollapsed, setIsCollapsed] = useState('collapsed')
   return (
