@@ -4,7 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { RiMessage2Line, RiFacebookFill } from 'react-icons/ri'
 import { BiPhone } from 'react-icons/bi'
 import { Container, Row } from 'react-bootstrap'
-import '../Styles/MyFooter.scss'
+import '../styles/MyFooter.scss'
 
 function MyFooter(props) {
   return (

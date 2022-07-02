@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { doc } from 'prettier'
+import { useEffect, useState } from 'react'
 import '../AdoptPage.scss'
 const CommentForm = ({
   handleSubmit,
@@ -8,12 +9,21 @@ const CommentForm = ({
   initialText = '',
 }) => {
   const [text, setText] = useState(initialText)
-  const isTextareaDisabled = text.length === 0
+  const [name, setName] = useState('')
+  const [disabled, setDisable] = useState()
+  const isTextareaDisabled = () => {
+    if (!text) {
+      alert('Text something you want to comment!')
+    } else if (!name) {
+      alert('Text your name!')
+    }
+  }
   //有輸入才有可以push btn
   const onSubmit = (event) => {
     event.preventDefault()
-    handleSubmit(text)
+    handleSubmit(text, name)
     setText('')
+    setName('')
   }
   return (
     <form onSubmit={onSubmit}>
@@ -33,6 +43,8 @@ const CommentForm = ({
                     type="text"
                     placeholder="name"
                     className="MKReplyContext"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   ></input>
                   <textarea
                     placeholder="what are your thoughts?"
@@ -43,8 +55,10 @@ const CommentForm = ({
                   <div className="MKAPbutton" type="submit">
                     <div>
                       <button
+                        id="text"
                         className="MKAPcard-btn"
-                        disabled={isTextareaDisabled}
+                        // onClick={isTextareaDisabled}
+                        disabled={!text || !name ? true : false}
                       >
                         Send
                       </button>

@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiHeart, BiHomeAlt, BiCartAlt } from 'react-icons/bi'
 import Avatar from './Avatar'
 import logo from '../images/logo.svg'
-import '../Styles/MyNavbar.scss'
+import '../styles/MyNavbar.scss'
 
 // 要使用能有active css效果的NavLink元件
 import { NavLink } from 'react-router-dom'

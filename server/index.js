@@ -6,9 +6,9 @@ const mysql = require('mysql')
 //連database
 const db = mysql.createPool({
   host: 'localhost',
-  user: 'Micheal',
+  user: 'michael',
   password: 'admin',
-  database: 'pet-project',
+  database: 'pet_project',
 })
 //cors
 const corsOptions = {

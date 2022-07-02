@@ -19,8 +19,8 @@ const Comments = ({ commentsUrl, currentUserId }) => {
         (a, b) =>
           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       )
-  const addComment = (text, parentId) => {
-    createCommentApi(text, parentId).then((comment) => {
+  const addComment = (text, name, parentId) => {
+    createCommentApi(text, name, parentId).then((comment) => {
       setBackendComments([comment, ...backendComments])
       setActiveComment(null)
     })

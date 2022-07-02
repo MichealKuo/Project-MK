@@ -1,7 +1,7 @@
 // 使用套件
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import React from 'react'
-import './Styles/global.scss'
+import './styles/global.scss'
 
 // 頁面用元件
 

@@ -39,19 +39,19 @@ export const getComments = async () => {
   ]
 }
 
-export const createComment = async (text, parentId = null) => {
+export const createComment = async (text, name, parentId = null) => {
   return {
     id: Math.random().toString(36).substr(2, 9),
     body: text,
     parentId,
     userId: '1',
-    username: 'Micheal',
+    username: name,
     img: 'https://img.onl/VWWpUj',
     createdAt: new Date().toISOString(),
   }
 }
 
-export const updateComment = async (text) => {
+export const updateComment = async (text, name) => {
   return { text }
 }
 

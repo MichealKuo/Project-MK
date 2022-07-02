@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 import { withRouter, Link } from 'react-router-dom'
-import { BsSearch } from 'react-icons/bs'
 //Card
 // import AdoptCards from './AdoptCards'
 import Axios from 'axios'
@@ -43,27 +42,27 @@ function AdoptList() {
   const handleGender = (e) => {
     setSelectGender(e.target.value)
   }
-  const filteredData = paginatedPosts.filter((item) => {
+  const filteredData = petList.filter((item) => {
     return Object.values(item)
       .join('')
       .includes(selectType + selectLocation + selectGender)
   })
 
-  console.log(selectType)
-  console.log(filteredData)
-  console.log(paginatedPosts)
   // const [filteredResults, setFilteredResults] = useState([])
   // console.log(paginatedPosts)
   // console.log(petList)
   // console.log(paginatedPosts)
   // console.log(filteredResults)
-  const pageSize = 9
-  const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
+  const pageSize = 6
+  const pageCount = filteredData ? Math.ceil(filteredData.length / pageSize) : 0
   const pages = Dash.range(1, pageCount + 1)
   const pagination = (pageNo) => {
     setCurrentPage(pageNo)
     const startIndex = (pageNo - 1) * pageSize
-    const paginatedPost = Dash(petList).slice(startIndex).take(pageSize).value()
+    const paginatedPost = Dash(filteredData)
+      .slice(startIndex)
+      .take(pageSize)
+      .value()
     setPaginatedPosts(paginatedPost)
     window.scrollTo({
       top: 750,
@@ -120,8 +119,8 @@ function AdoptList() {
                     onChange={handleType}
                   >
                     <option value="">---請選擇---</option>
-                    <option value="貓咪">貓咪</option>
-                    <option value="狗狗">狗狗</option>
+                    <option value="Cat">貓咪</option>
+                    <option value="Dog">狗狗</option>
                   </select>
                 </div>
                 <div className="MKselector ">
@@ -132,9 +131,9 @@ function AdoptList() {
                     onChange={handleLocation}
                   >
                     <option value="">---請選擇---</option>
-                    <option value="台北市">台北市</option>
-                    <option value="新北市">新北市</option>
-                    <option value="台中市">台中市</option>
+                    <option value="Taipei">台北市</option>
+                    <option value="NewTaipei">新北市</option>
+                    <option value="Taichung">台中市</option>
                   </select>
                 </div>
                 <div className="MKselector">
@@ -145,8 +144,8 @@ function AdoptList() {
                     onChange={handleGender}
                   >
                     <option value="">---請選擇---</option>
-                    <option value="男孩">男孩</option>
-                    <option value="女孩">女孩</option>
+                    <option value="Boy">男孩</option>
+                    <option value="Girl">女孩</option>
                   </select>
                 </div>
                 {/* search BTN */}
@@ -165,17 +164,9 @@ function AdoptList() {
         </>
         {/* cards */}
         <>
-          {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
-          {/* <AdoptCards
-            selectType={selectType}
-            selectLocation={selectLocation}
-            selectGender={selectGender}
-            setSelectType={setSelectType}
-            handleType={handleType}
-          /> */}
           <div className="MKALrow-list">
             <div className="MKALlist">
-              {'(selectType & selectGender & selectLocation)'.length > 1
+              {selectType || selectGender || selectLocation === undefined
                 ? filteredData.map((v, i) => {
                     return (
                       <p key={i} className="MKDisplayLi col-12 col-md-4">
